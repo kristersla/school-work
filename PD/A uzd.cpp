@@ -28,7 +28,7 @@ int main()
 
 //Tiek deklerēti mainīgie
 
-    int x, y, i;
+    int x, y;
 
     char u = 'y';
     char tur = 'y';
