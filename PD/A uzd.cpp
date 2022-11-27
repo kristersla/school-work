@@ -67,3 +67,19 @@ int main()
 
     cout<<"Paldies par darbu!"<<endl;
 }
+
+
+//console:
+
+//Si ir programma kura paska kopigos dalitajus starp diviem veseliem skaitliem.
+
+
+//Ievadi pirmo veselo skaitli vai ciparu:
+//4
+//Ievadi otro veselo skaitli vai ciparu:
+//8
+
+//Visi kopigie dalitaji:
+//1 2 4 
+
+//Velies meginat velreiz (y/n)
