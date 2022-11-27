@@ -1,3 +1,7 @@
+//Dots divu dimensiju masīvs A(n,n), kas aizpildīts ar nullēm un vieniniekiem (masīvu izveidot un ieraksīt tajā vērtības pašiem).
+//Noskaidrot, cik masīva kolonnu un rindu ir aizpildītas tikai ar 1 un cik kolonnu un rindu ir aizpildītas tikai ar 0.
+//Izveidot un izmantot funkciju vai funkcijas, kas vienai rindai vai kolonnai var pateikt, ka tā sastāv tikai no 1 vai 0.
+
 #include <iostream>
 using namespace std;
 
