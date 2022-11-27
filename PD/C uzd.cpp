@@ -93,3 +93,8 @@ int main()
     column(masivs);
 
 }
+
+
+//console: 
+//Rina ar 0 atrodas 1 rinda
+//Kollona ar 0 atrodas 5 kollona
