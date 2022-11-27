@@ -9,7 +9,7 @@ using namespace std;
 void dal(int x, int y){
 
 	//Tiek izveidots for loop cikls tajā tiek pielīdzināts mainīgais i = 1, kas būs mūsu noteicējs vai turpinās cikls, ja i ir mazāks par x un y, tad pieskaitās pie i + 1 un notiek if funkcija.
-	//if funkcija kurā dotie cipari/skaitļi tiek izdalīti, ja atlikums dalijumam ir 0, tad tiek izprinēets dalījums.
+	//if funkcija kurā dotie cipari/skaitļi tiek izdalīti, ja atlikums dalijumam ir 0, tad tiek izprintēts dalījums.
 
 	for(int i = 1; i<=x&&y; ++i){
 
