@@ -39,13 +39,5 @@ class Grade:
 pieter_grade = Grade(100)
 pieter.add_grade(pieter_grade.score)
 
-roger.attendance["2023-09-15"] = True
-sandro.attendance["2023-09-15"] = False
-pieter.attendance["2023-09-15"] = True
-
 pieter.add_grade(pieter_grade)
 print(pieter.get_average())
-
-
-
-
