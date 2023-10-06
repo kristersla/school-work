@@ -12,8 +12,6 @@ class Circle:
     def circumfrence(self):
         return 2*self.pi * self.radius
 
-        
-
 circle = Circle(100)
 
 pizza_area = circle.area(12/2)
