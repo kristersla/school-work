@@ -1,0 +1,25 @@
+CREATE TABLE GymEquipment (
+    EquipmentID INT PRIMARY KEY,
+    EquipmentName VARCHAR(50),
+    EquipmentType VARCHAR(50),
+    PurchaseDate DATE,
+    Price DECIMAL(8, 2)
+);
+
+-- Inserting sample equipment data
+INSERT INTO GymEquipment (EquipmentID, EquipmentName, EquipmentType, PurchaseDate, Price)
+VALUES
+    (1, 'Treadmill', 'Cardio', '2022-01-05', 1500.00),
+    (2, 'Dumbbells', 'Strength', '2022-02-10', 500.00),
+    (3, 'Elliptical Trainer', 'Cardio', '2022-03-15', 2000.00),
+    (4, 'Weight Bench', 'Strength', '2022-04-20', 800.00),
+    (5, 'Stationary Bike', 'Cardio', '2022-05-25', 1200.00);
+    
+SELECT *
+FROM GymEquipment
+WHERE purchasedate BETWEEN '2022-01-05' AND '2022-05-25';
+
+SELECT *
+FROM GymEquipment
+WHERE price BETWEEN 1000 AND 1500;
+
