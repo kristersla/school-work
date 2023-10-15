@@ -1,0 +1,11 @@
+{
+    "name": "does this work?",
+    "version": "1.0.0",
+    "description": "This is a test extention",
+    "manifest_version": 3,
+    "author": "Kristers",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "does this work?"
+    }
+}
