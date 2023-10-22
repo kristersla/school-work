@@ -167,7 +167,7 @@ class SentimentAnalyzer:
     MODEL = "cardiffnlp/twitter-roberta-base-sentiment"
     LABEL_MAPPING_LINK = "https://raw.githubusercontent.com/cardiffnlp/tweeteval/main/datasets/sentiment/mapping.txt"
     INPUT_FILE = 'praktiskais/comments/jsons/translated.json'
-    OUTPUT_FILE = 'praktiskais\comments\jsons\sentiment.json'
+    OUTPUT_FILE = 'praktiskais/sentiment/sentiment.json'
 
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained(self.MODEL)
@@ -212,8 +212,9 @@ class SentimentAnalyzer:
         with open(self.OUTPUT_FILE, 'w') as json_output_file:
             json.dump(sentiment_results, json_output_file, indent=4, separators=(',', ': '))
 
+
 developer_key = "AIzaSyDQzn1RLl6OV_HP4Oj_YHwbnTsEHM4PDtM"
-video_id = "1tVvwMKD19Y"
+video_id = "2gv2rMFIO28"
 print("loading...")
 scrape = Scrape_Comments(developer_key)
 scrape.get_comments(video_id)
