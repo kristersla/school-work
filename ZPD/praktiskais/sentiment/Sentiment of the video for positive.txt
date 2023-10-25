@@ -1,0 +1,55 @@
+Sentiment of the video for positive: 0.24%
+Sentiment of the video for neutral: 0.54%
+Sentiment of the video for negative: 0.21%
+
+Positive: 48.45%
+Neutral: 33.70%
+Negative: 17.85%
+
+Average Positive: 61.57%
+Average Negative: 14.39%
+Average Neutral: 24.04%
+
+xxxxxxxxxxxxxxxxxx
+
+Positive: 48.28%
+Neutral: 41.38%
+Negative: 10.34%
+
+Sentiment of the video for positive: 0.38%
+Sentiment of the video for neutral: 0.38%
+Sentiment of the video for negative: 0.24%
+
+
+Average Positive: 75.86%
+Average Negative: 6.90%
+Average Neutral: 17.24%
+
+xxxxxxxxxxxxxxxxxxxxxxx
+
+
+Positive: 73.91%
+Neutral: 18.12%
+Negative: 7.97%
+
+Sentiment of the video for positive: 0.65%
+Sentiment of the video for neutral: 0.2%
+Sentiment of the video for negative: 0.15%
+
+Average Positive: 81.16%
+Average Negative: 5.07%
+Average Neutral: 13.77%
+
+xxxxxxxxxxxxxxxxxxxxxxx
+
+Positive: 52.31%
+Neutral: 24.95%
+Negative: 22.74%
+
+Sentiment of the video for positive: 0.3%
+Sentiment of the video for neutral: 0.44%
+Sentiment of the video for negative: 0.26%
+
+Average Positive: 63.18%
+Average Negative: 19.32%
+Average Neutral: 17.51%

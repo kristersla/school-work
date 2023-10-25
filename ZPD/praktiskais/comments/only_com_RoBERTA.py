@@ -18,27 +18,6 @@ class Scrape_Comments:
         self.youtube = googleapiclient.discovery.build(self.api_service_name, self.api_version, developerKey=self.DEVELOPER_KEY)
         self.comments = []
 
-    def get_replies(self, comment_id):
-        replies = []
-
-        next_page_token = None
-        while True:
-            replies_response = self.youtube.comments().list(
-                part='snippet',
-                maxResults=100,
-                parentId=comment_id,
-                pageToken=next_page_token
-            ).execute()
-
-            for reply in replies_response.get('items', []):
-                replies.append(reply['snippet']['textDisplay'])
-
-            next_page_token = replies_response.get("nextPageToken")
-            if not next_page_token:
-                break
-
-        return replies
-
     def get_comments(self, video_id, max_results=100):
         request = self.youtube.commentThreads().list(
             part="snippet",
@@ -58,7 +37,6 @@ class Scrape_Comments:
                     'updated_at': comment['updatedAt'],
                     'like_count': comment['likeCount'],
                     'text': comment['textDisplay'],
-                    'replies': self.get_replies(item['id'])
                 })
 
             if 'nextPageToken' in response:
@@ -77,18 +55,9 @@ class Scrape_Comments:
             json.dump(self.comments, f, ensure_ascii=False, indent=4)
     
     def count_comments(self):
-        with open('praktiskais/comments/jsons/comments.json', 'r', encoding='utf-8') as f:
-            comments = json.load(f)
-            
-        total_text = len(comments)
-        total_replies = 0
+        total_comments = len(self.comments)
+        print(f"Total Comments: {total_comments}")
 
-        for comment in comments:
-            num_replies = len(comment.get('replies', []))
-            total_replies += num_replies
-
-        total_comments = total_text + total_replies
-        print(f"Comments: {total_comments}, Text: {total_text}, Replies: {total_replies}")
 
 class Combine:
     def mix_Rep_and_com(self):
@@ -106,6 +75,15 @@ class Combine:
         
         def remove_mentions(text):
             return re.sub(r'[^\w]', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'[^a-z\s]+', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'(\s+)', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'\[[^]]*\]', ' ', text)
     
         output_data = []
         for comment in comments_data:
@@ -221,24 +199,24 @@ class SentimentAnalyzer:
             json.dump(sentiment_results, json_output_file, indent=4, separators=(',', ': '))
 
 
-developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
-video_id = "1tVvwMKD19Y"
-print("loading...")
-scrape = Scrape_Comments(developer_key)
-scrape.get_comments(video_id)
-scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
-scrape.count_comments()
+# developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
+# video_id = "FcN3HnQz3y4"
+# print("loading...")
+# scrape = Scrape_Comments(developer_key)
+# scrape.get_comments(video_id)
+# scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
+# scrape.count_comments()
 
-combine = Combine()
-combine.mix_Rep_and_com()
+# combine = Combine()
+# combine.mix_Rep_and_com()
 
-detect_lang = Detect_Language()
-detect_lang.detect_lang()
+# detect_lang = Detect_Language()
+# detect_lang.detect_lang()
 
-print("started translating...")
-translate_all = Translate_All_Comments()
-translate_all.translate()
-print("done!")
+# print("started translating...")
+# translate_all = Translate_All_Comments()
+# translate_all.translate()
+# print("done!")
 
 print("started sentiment...")
 sentiment_analyzer = SentimentAnalyzer()

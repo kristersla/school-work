@@ -10,6 +10,11 @@ import json
 import csv
 import re
 
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import numpy as np
+
+
 class Scrape_Comments:
     def __init__(self, developer_key):
         self.api_service_name = "youtube"
@@ -17,27 +22,6 @@ class Scrape_Comments:
         self.DEVELOPER_KEY = developer_key
         self.youtube = googleapiclient.discovery.build(self.api_service_name, self.api_version, developerKey=self.DEVELOPER_KEY)
         self.comments = []
-
-    def get_replies(self, comment_id):
-        replies = []
-
-        next_page_token = None
-        while True:
-            replies_response = self.youtube.comments().list(
-                part='snippet',
-                maxResults=100,
-                parentId=comment_id,
-                pageToken=next_page_token
-            ).execute()
-
-            for reply in replies_response.get('items', []):
-                replies.append(reply['snippet']['textDisplay'])
-
-            next_page_token = replies_response.get("nextPageToken")
-            if not next_page_token:
-                break
-
-        return replies
 
     def get_comments(self, video_id, max_results=100):
         request = self.youtube.commentThreads().list(
@@ -58,7 +42,6 @@ class Scrape_Comments:
                     'updated_at': comment['updatedAt'],
                     'like_count': comment['likeCount'],
                     'text': comment['textDisplay'],
-                    'replies': self.get_replies(item['id'])
                 })
 
             if 'nextPageToken' in response:
@@ -77,18 +60,9 @@ class Scrape_Comments:
             json.dump(self.comments, f, ensure_ascii=False, indent=4)
     
     def count_comments(self):
-        with open('praktiskais/comments/jsons/comments.json', 'r', encoding='utf-8') as f:
-            comments = json.load(f)
-            
-        total_text = len(comments)
-        total_replies = 0
+        total_comments = len(self.comments)
+        print(f"Total Comments: {total_comments}")
 
-        for comment in comments:
-            num_replies = len(comment.get('replies', []))
-            total_replies += num_replies
-
-        total_comments = total_text + total_replies
-        print(f"Comments: {total_comments}, Text: {total_text}, Replies: {total_replies}")
 
 class Combine:
     def mix_Rep_and_com(self):
@@ -106,6 +80,15 @@ class Combine:
         
         def remove_mentions(text):
             return re.sub(r'[^\w]', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'[^a-z\s]+', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'(\s+)', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'\[[^]]*\]', ' ', text)
     
         output_data = []
         for comment in comments_data:
@@ -171,15 +154,16 @@ class Translate_All_Comments:
 
 class SentimentAnalyzer:
 
-    MODEL = "cardiffnlp/twitter-roberta-base-sentiment"
+    ROBERTA_MODEL = "cardiffnlp/twitter-roberta-base-sentiment"
     LABEL_MAPPING_LINK = "https://raw.githubusercontent.com/cardiffnlp/tweeteval/main/datasets/sentiment/mapping.txt"
     INPUT_FILE = 'praktiskais/comments/jsons/translated.json'
     OUTPUT_FILE = 'praktiskais/comments/jsons/sentiment.json'
 
     def __init__(self):
-        self.tokenizer = AutoTokenizer.from_pretrained(self.MODEL)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.ROBERTA_MODEL)
         self.labels = self._download_label_mapping()
-        self.model = AutoModelForSequenceClassification.from_pretrained(self.MODEL)
+        self.model = AutoModelForSequenceClassification.from_pretrained(self.ROBERTA_MODEL)
+        self.analyzer = SentimentIntensityAnalyzer()
 
     def _download_label_mapping(self):
         labels = []
@@ -206,7 +190,44 @@ class SentimentAnalyzer:
 
         return result_item
 
-    def analyze_sentiments_in_json(self):
+    def analyze_sentiment_hybrid(self, text):
+        # Analyze sentiment using RoBERTa
+        inputs = self.tokenizer(text, return_tensors='pt', truncation=True, max_length=512)
+        output = self.model(**inputs)
+        scores_roberta = output.logits[0].detach().numpy()
+        scores_roberta = softmax(scores_roberta)
+        ranking_roberta = np.argsort(scores_roberta)
+        ranking_roberta = ranking_roberta[::-1]
+        result_item_roberta = {"text": text}
+
+        for i in range(scores_roberta.shape[0]):
+            label = self.labels[ranking_roberta[i]]
+            score = np.round(float(scores_roberta[ranking_roberta[i]]), 4)
+            result_item_roberta[label] = score
+
+        # Analyze sentiment using VADER
+        sentiment_scores = self.analyzer.polarity_scores(text)
+        
+        # Combine the scores (You can choose your own logic here)
+        combined_score = (result_item_roberta['positive'] + sentiment_scores['compound']) / 2
+
+        # Determine the sentiment label based on the combined score
+        if combined_score >= 0.05:
+            sentiment_label = 'positive'
+        elif combined_score <= -0.05:
+            sentiment_label = 'negative'
+        else:
+            sentiment_label = 'neutral'
+
+        result_item_hybrid = {
+            "text": text,
+            "combined_score": combined_score,
+            "sentiment_label": sentiment_label
+        }
+
+        return result_item_hybrid
+
+    def analyze_sentiments_in_json_hybrid(self):
         with open(self.INPUT_FILE, 'r') as json_file:
             data = json.load(json_file)
 
@@ -214,33 +235,85 @@ class SentimentAnalyzer:
         for item in data:
             text = item.get('text', '')
             if text:
-                result_item = self.analyze_sentiment(text)
+                result_item = self.analyze_sentiment_hybrid(text)
                 sentiment_results.append(result_item)
 
         with open(self.OUTPUT_FILE, 'w') as json_output_file:
             json.dump(sentiment_results, json_output_file, indent=4, separators=(',', ': '))
 
+        return sentiment_results
+    
+    def sort_comments_by_sentiment(self, results):
+        positive_comments = []
+        neutral_comments = []
+        negative_comments = []
 
-developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
-video_id = "1tVvwMKD19Y"
-print("loading...")
-scrape = Scrape_Comments(developer_key)
-scrape.get_comments(video_id)
-scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
-scrape.count_comments()
+        for result in results:
+            sentiment_label = result['sentiment_label']
+            comment_text = result['text']
+            if sentiment_label == 'positive':
+                positive_comments.append({"text": comment_text})
+            elif sentiment_label == 'neutral':
+                neutral_comments.append({"text": comment_text})
+            elif sentiment_label == 'negative':
+                negative_comments.append({"text": comment_text})
 
-combine = Combine()
-combine.mix_Rep_and_com()
+        paths = {
+            'positive': 'praktiskais/sentiment/positive.json',
+            'neutral': 'praktiskais/sentiment/neutral.json',
+            'negative': 'praktiskais/sentiment/negative.json'
+        }
 
-detect_lang = Detect_Language()
-detect_lang.detect_lang()
+        for label, comments in zip(paths.keys(), [positive_comments, neutral_comments, negative_comments]):
+            with open(paths[label], 'w') as f:
+                json.dump(comments, f, indent=4, separators=(',', ': '))
 
-print("started translating...")
-translate_all = Translate_All_Comments()
-translate_all.translate()
-print("done!")
+        print("Comments sorted and saved into respective JSON files.")
+
+    def calculate_average_scores(self, results):
+        total_positive = total_negative = total_neutral = 0
+        for result in results:
+            sentiment_label = result['sentiment_label']
+            if sentiment_label == 'positive':
+                total_positive += 1
+            elif sentiment_label == 'negative':
+                total_negative += 1
+            elif sentiment_label == 'neutral':
+                total_neutral += 1
+
+        total_entries = len(results)
+
+        average_positive = (total_positive / total_entries) * 100
+        average_negative = (total_negative / total_entries) * 100
+        average_neutral = (total_neutral / total_entries) * 100
+
+        print(f"Average Positive: {average_positive:.2f}%")
+        print(f"Average Negative: {average_negative:.2f}%")
+        print(f"Average Neutral: {average_neutral:.2f}%")
+
+
+# developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
+# video_id = "FcN3HnQz3y4"
+# print("loading...")
+# scrape = Scrape_Comments(developer_key)
+# scrape.get_comments(video_id)
+# scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
+# scrape.count_comments()
+
+# combine = Combine()
+# combine.mix_Rep_and_com()
+
+# detect_lang = Detect_Language()
+# detect_lang.detect_lang()
+
+# print("started translating...")
+# translate_all = Translate_All_Comments()
+# translate_all.translate()
+# print("done!")
 
 print("started sentiment...")
 sentiment_analyzer = SentimentAnalyzer()
-sentiment_analyzer.analyze_sentiments_in_json()
+results = sentiment_analyzer.analyze_sentiments_in_json_hybrid()
+sentiment_analyzer.sort_comments_by_sentiment(results)
+sentiment_analyzer.calculate_average_scores(results)
 print("done!")

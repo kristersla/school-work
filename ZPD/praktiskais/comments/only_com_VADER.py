@@ -1,13 +1,11 @@
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from googletrans import Translator
 from scipy.special import softmax
 import googleapiclient.discovery
 from langdetect import detect
 from cleantext import clean
-import urllib.request
-import numpy as np
 import json
-import csv
 import re
 
 class Scrape_Comments:
@@ -17,27 +15,6 @@ class Scrape_Comments:
         self.DEVELOPER_KEY = developer_key
         self.youtube = googleapiclient.discovery.build(self.api_service_name, self.api_version, developerKey=self.DEVELOPER_KEY)
         self.comments = []
-
-    def get_replies(self, comment_id):
-        replies = []
-
-        next_page_token = None
-        while True:
-            replies_response = self.youtube.comments().list(
-                part='snippet',
-                maxResults=100,
-                parentId=comment_id,
-                pageToken=next_page_token
-            ).execute()
-
-            for reply in replies_response.get('items', []):
-                replies.append(reply['snippet']['textDisplay'])
-
-            next_page_token = replies_response.get("nextPageToken")
-            if not next_page_token:
-                break
-
-        return replies
 
     def get_comments(self, video_id, max_results=100):
         request = self.youtube.commentThreads().list(
@@ -58,7 +35,6 @@ class Scrape_Comments:
                     'updated_at': comment['updatedAt'],
                     'like_count': comment['likeCount'],
                     'text': comment['textDisplay'],
-                    'replies': self.get_replies(item['id'])
                 })
 
             if 'nextPageToken' in response:
@@ -77,18 +53,9 @@ class Scrape_Comments:
             json.dump(self.comments, f, ensure_ascii=False, indent=4)
     
     def count_comments(self):
-        with open('praktiskais/comments/jsons/comments.json', 'r', encoding='utf-8') as f:
-            comments = json.load(f)
-            
-        total_text = len(comments)
-        total_replies = 0
+        total_comments = len(self.comments)
+        print(f"Total Comments: {total_comments}")
 
-        for comment in comments:
-            num_replies = len(comment.get('replies', []))
-            total_replies += num_replies
-
-        total_comments = total_text + total_replies
-        print(f"Comments: {total_comments}, Text: {total_text}, Replies: {total_replies}")
 
 class Combine:
     def mix_Rep_and_com(self):
@@ -106,6 +73,15 @@ class Combine:
         
         def remove_mentions(text):
             return re.sub(r'[^\w]', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'[^a-z\s]+', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'(\s+)', ' ', text)
+        
+        def remove_mentions(text):
+            return re.sub(r'\[[^]]*\]', ' ', text)
     
         output_data = []
         for comment in comments_data:
@@ -171,74 +147,78 @@ class Translate_All_Comments:
 
 class SentimentAnalyzer:
 
-    MODEL = "cardiffnlp/twitter-roberta-base-sentiment"
-    LABEL_MAPPING_LINK = "https://raw.githubusercontent.com/cardiffnlp/tweeteval/main/datasets/sentiment/mapping.txt"
     INPUT_FILE = 'praktiskais/comments/jsons/translated.json'
-    OUTPUT_FILE = 'praktiskais/comments/jsons/sentiment.json'
-
-    def __init__(self):
-        self.tokenizer = AutoTokenizer.from_pretrained(self.MODEL)
-        self.labels = self._download_label_mapping()
-        self.model = AutoModelForSequenceClassification.from_pretrained(self.MODEL)
-
-    def _download_label_mapping(self):
-        labels = []
-        with urllib.request.urlopen(self.LABEL_MAPPING_LINK) as f:
-            html = f.read().decode('utf-8').split("\n")
-            csvreader = csv.reader(html, delimiter='\t')
-            labels = [row[1] for row in csvreader if len(row) > 1]
-        return labels
+    OUTPUT_POSITIVE_FILE = 'praktiskais/comments/jsons/positive.json'
+    OUTPUT_NEUTRAL_FILE = 'praktiskais/comments/jsons/neutral.json'
+    OUTPUT_NEGATIVE_FILE = 'praktiskais/comments/jsons/negative.json'
 
     def analyze_sentiment(self, text):
-        inputs = self.tokenizer(text, return_tensors='pt', truncation=True, max_length=512)
-        output = self.model(**inputs)
-        scores = output.logits[0].detach().numpy()
-        scores = softmax(scores)
-
-        ranking = np.argsort(scores)
-        ranking = ranking[::-1]
-        result_item = {"text": text}
-
-        for i in range(scores.shape[0]):
-            label = self.labels[ranking[i]]
-            score = np.round(float(scores[ranking[i]]), 4)
-            result_item[label] = score
-
-        return result_item
+        analyzer = SentimentIntensityAnalyzer()
+        sentiment = analyzer.polarity_scores(text)
+        return sentiment
 
     def analyze_sentiments_in_json(self):
         with open(self.INPUT_FILE, 'r') as json_file:
             data = json.load(json_file)
 
-        sentiment_results = []
-        for item in data:
-            text = item.get('text', '')
+        positive_entries = []
+        neutral_entries = []
+        negative_entries = []
+
+        for entry in data:
+            text = entry.get('text', '')
             if text:
-                result_item = self.analyze_sentiment(text)
-                sentiment_results.append(result_item)
+                sentiment_scores = self.analyze_sentiment(text)
+                if sentiment_scores['compound'] >= 0.05:
+                    positive_entries.append(entry)
+                elif sentiment_scores['compound'] <= -0.05:
+                    negative_entries.append(entry)
+                else:
+                    neutral_entries.append(entry)
 
-        with open(self.OUTPUT_FILE, 'w') as json_output_file:
-            json.dump(sentiment_results, json_output_file, indent=4, separators=(',', ': '))
+        with open(self.OUTPUT_POSITIVE_FILE, 'w') as file:
+            json.dump(positive_entries, file, indent=4)
+
+        with open(self.OUTPUT_NEUTRAL_FILE, 'w') as file:
+            json.dump(neutral_entries, file, indent=4)
+
+        with open(self.OUTPUT_NEGATIVE_FILE, 'w') as file:
+            json.dump(negative_entries, file, indent=4)
+
+        positive_count = len(positive_entries)
+        neutral_count = len(neutral_entries)
+        negative_count = len(negative_entries)
+
+        total_entries = len(data)
+
+        positive_percentage = (positive_count / total_entries) * 100
+        neutral_percentage = (neutral_count / total_entries) * 100
+        negative_percentage = (negative_count / total_entries) * 100
+
+        print(f"Positive: {positive_percentage:.2f}%")
+        print(f"Neutral: {neutral_percentage:.2f}%")
+        print(f"Negative: {negative_percentage:.2f}%")
+        print("Data saved successfully.")
 
 
-developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
-video_id = "1tVvwMKD19Y"
-print("loading...")
-scrape = Scrape_Comments(developer_key)
-scrape.get_comments(video_id)
-scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
-scrape.count_comments()
+# developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
+# video_id = "FcN3HnQz3y4"
+# print("loading...")
+# scrape = Scrape_Comments(developer_key)
+# scrape.get_comments(video_id)
+# scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
+# scrape.count_comments()
 
-combine = Combine()
-combine.mix_Rep_and_com()
+# combine = Combine()
+# combine.mix_Rep_and_com()
 
-detect_lang = Detect_Language()
-detect_lang.detect_lang()
+# detect_lang = Detect_Language()
+# detect_lang.detect_lang()
 
-print("started translating...")
-translate_all = Translate_All_Comments()
-translate_all.translate()
-print("done!")
+# print("started translating...")
+# translate_all = Translate_All_Comments()
+# translate_all.translate()
+# print("done!")
 
 print("started sentiment...")
 sentiment_analyzer = SentimentAnalyzer()

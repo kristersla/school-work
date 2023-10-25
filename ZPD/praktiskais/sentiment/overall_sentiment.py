@@ -52,7 +52,7 @@ elif overall_sentiment == average_highest_neutral:
 else:
     sentiment_label = 'negative'
 
-# Get the count for the relevant label
+
 if sentiment_label == 'positive':
     sentiment_count = len(highest_positive_values)
 elif sentiment_label == 'neutral':
@@ -61,7 +61,6 @@ else:
     sentiment_count = len(highest_negative_values)
 
 
-# Print statistics for each sentiment type
 print(f'Total highest positive values: {sum(highest_positive_values)}')
 print(f'Number of highest positive entries: {len(highest_positive_values)}')
 print(f'Average highest positive value: {average_highest_positive}\n')
