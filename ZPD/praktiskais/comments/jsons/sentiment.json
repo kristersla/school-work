@@ -1,87 +1,412 @@
 [
     {
-        "text": "sakfafkfa/asdhnk ha \\ hsagdhjaghdj",
-        "combined_score": 0.188,
+        "text": "great video",
+        "combined_score": 0.7846500000000001,
         "sentiment_label": "positive"
     },
     {
-        "text": "sahdadk < letter a ajsdhdka",
-        "combined_score": 0.02965,
-        "sentiment_label": "neutral"
-    },
-    {
-        "text": "<heref a ajsdhdkasldfaf",
-        "combined_score": 0.0227,
-        "sentiment_label": "neutral"
-    },
-    {
-        "text": "yes no way!",
-        "combined_score": 0.23675000000000002,
+        "text": "the best fucking video I've seen in a long time hahaha",
+        "combined_score": 0.89115,
         "sentiment_label": "positive"
     },
     {
-        "text": "should be a good game soon",
-        "combined_score": 0.7121999999999999,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "it's a shame that 2020 wasn't a good game, because now it's not sad either",
-        "combined_score": -0.21045,
+        "text": "putting java on e is just some hater shit :p",
+        "combined_score": -0.3227,
         "sentiment_label": "negative"
     },
     {
-        "text": "it works well",
-        "combined_score": 0.5569999999999999,
+        "text": "\"beer tastes like pee\" how do you know bro...",
+        "combined_score": 0.1925,
         "sentiment_label": "positive"
     },
     {
-        "text": "Strada",
-        "combined_score": 0.10615,
+        "text": "ur videos are awesome man",
+        "combined_score": 0.8009999999999999,
         "sentiment_label": "positive"
     },
     {
-        "text": "works",
-        "combined_score": 0.11875,
+        "text": "dude java rocks",
+        "combined_score": 0.2052,
         "sentiment_label": "positive"
     },
     {
-        "text": "works",
-        "combined_score": 0.11875,
+        "text": "13k views. 1.3 million likes",
+        "combined_score": 0.35414999999999996,
         "sentiment_label": "positive"
     },
     {
-        "text": "are you struggling?",
-        "combined_score": -0.1961,
-        "sentiment_label": "negative"
-    },
-    {
-        "text": "brother",
-        "combined_score": 0.1001,
+        "text": "amazing intro",
+        "combined_score": 0.7221500000000001,
         "sentiment_label": "positive"
     },
     {
-        "text": "add this \"",
-        "combined_score": 0.06205,
+        "text": "you're funny",
+        "combined_score": 0.6452,
         "sentiment_label": "positive"
     },
     {
-        "text": "interesting point of view",
-        "combined_score": 0.5578,
+        "text": "10/10 video",
+        "combined_score": 0.42145,
         "sentiment_label": "positive"
     },
     {
-        "text": "this finally works!",
-        "combined_score": 0.4694,
+        "text": "i edge to your video",
+        "combined_score": 0.1147,
         "sentiment_label": "positive"
     },
     {
-        "text": "everything is working perfectly",
+        "text": "glad i found your videos",
+        "combined_score": 0.69625,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "lil bro cant titrate",
+        "combined_score": 0.01925,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "great video you're goat",
+        "combined_score": 0.75125,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "legendary tier list",
+        "combined_score": 0.0751,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "thank you for not pretending to like vim.",
+        "combined_score": 0.046400000000000004,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "cool vid",
+        "combined_score": 0.6078,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "nice",
+        "combined_score": 0.5301,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "great list. approved",
+        "combined_score": 0.87035,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "add matlab to f",
+        "combined_score": 0.03675,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "become",
+        "combined_score": 0.11195,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "how cute",
+        "combined_score": 0.7070000000000001,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "great content",
         "combined_score": 0.77595,
         "sentiment_label": "positive"
     },
     {
-        "text": "dammn that was 3 years ago",
-        "combined_score": 0.0268,
+        "text": "top tiger god intro",
+        "combined_score": 0.27395,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "goat channel",
+        "combined_score": 0.03235,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "this dude don't know much about cs",
+        "combined_score": 0.00705,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "chemist here confirming that titration sucks",
+        "combined_score": -0.17805,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "thank you",
+        "combined_score": 0.57775,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "loved this",
+        "combined_score": 0.78315,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "so glad you put java so low i'm the biggest java hater known to man",
+        "combined_score": -0.04200000000000001,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "you need to make a glokk40spaz collab with those ps4 ahh mics",
+        "combined_score": 0.07925,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "how to exit vim? no, the more important question is, do you use nano or vi?",
+        "combined_score": 0.2111,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "dog once you have a job/no longer in school, squatting easily moves up to a tier. there is no better feeling than knowing you can squat more than anyone on your team/org/department/company",
+        "combined_score": 0.3349,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "if you had gotten a phd in vin like u were supposed to then you would kno neovim has a mouse setting smh my head",
+        "combined_score": 0.06035,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "beer deserves s tier, i can aim, think and code much better when drinking beer",
+        "combined_score": 0.5883499999999999,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "we have a whole class around finite automata and lots of more shit which is basicaly called theoretical compsci and that shits hard af... basically its all about doing mathematical proofs for the tms and different languages. its kinda like going through hell",
+        "combined_score": -0.44145,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "rate type of students next",
+        "combined_score": 0.0173,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "bro that intro",
+        "combined_score": 0.07425,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "dude straight up said \"ah yes, chemistry is a computer science topic\"",
+        "combined_score": 0.36945,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "i love you way of speaking words",
+        "combined_score": 0.7984,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "i have a feeling that you will be in the limelight very soon",
+        "combined_score": 0.4717,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "as long as i've heard about c on top tier you got my heart bru, your content is really good mate, keep it up!",
+        "combined_score": 0.9204,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "please never ever change your mic its glorious",
+        "combined_score": 0.7542500000000001,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "cryptography deserves to be in s tier by virtue of how fucking sick number theory is\ni'd put statistics in b tier because while it's kinda boring, i get secondhand embarrassment from just imagining what life would be like if i didn't know it\ncalc deserves a tier, as do linear algebra and graph theory (not included here but they should be)\ni hate recursion so i would put it in d tier. it's just so much harder to debug\ncomputer networking absolutely does not deserve s tier lmao\nyes i am a math major how could you tell",
+        "combined_score": 0.2379,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "bro put himself in titration tier",
+        "combined_score": 0.0169,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "bro plato is d tier at best he just at on his ass and wrote stoner thoughts all day",
+        "combined_score": 0.09055,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "the vim one got me offended.",
+        "combined_score": -0.1209,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "i think beer should be at least in a tier, helps me forget about functional programming",
+        "combined_score": 0.26080000000000003,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "chatgpt should be s tier",
+        "combined_score": 0.04335,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "if rick from rick and morty ever got a youtube channel...",
+        "combined_score": 0.02935,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "i feel pretty comfortable using vim. it is for no mouse workflow and saves your fingers",
+        "combined_score": 0.79755,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "the chem majors also hate titrations, they're not even useful in most fields of chemsitry.",
+        "combined_score": -0.36255000000000004,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "this is peak youtube",
+        "combined_score": 0.35215,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "w list but i would put vim in c tier because some shortcuts be useful",
+        "combined_score": 0.66245,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "i need the link please",
+        "combined_score": 0.23585,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "\"how to exit vim\"",
+        "combined_score": 0.0306,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "java does indeed deserve all the hate",
+        "combined_score": -0.28385,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "java - at the end of the day it deserves all the hate",
+        "combined_score": -0.28409999999999996,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "loved your sense of humor. you missed graph theory",
+        "combined_score": 0.7456499999999999,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "life changing",
+        "combined_score": 0.09845,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "my boi didn't attend infinit calculation and games. that's when automata theory gets spicy",
+        "combined_score": 0.0245,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "\"at the end of the day, it deserves all the hate\"\nbut fr tho the real reason people hate on java is because of oracle",
+        "combined_score": -0.4024,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "but have you ever wondered, what if megamind gave himself metroman's powers ???\n(part 1/6) - rebirth\n\"be not afraid,\" said megamind calmly. as he rose up in the sky, he felt every vibration of every molecule. his super senses made him see the world like never before. his huge brain lets him utilize the powers more optimally than metroman ever could.\nas he stood there, sharpening his senses, something struck him. \"what the fuck?\" - megamind gasped, as he thought he heard a familiar voice through his super-hearing. focusing his super-eyesight in the direction, he saw a figure resembling metroman, doing a concert on stage. \"this could not be... unless...\" - megamind was suspicious at first. but then, he noticed his superhuman fingers hitting the notes on that guitar that no human ever could. there is no doubt now. it was him. \"metrooomaaan!!\" - he screamed as he flew towards him. in a blink of an eye, he punched through and carried him straight, like a raging bullet. metroman was now pinned against the moon.\n\"how could you do this to me, leave me all alone? for this circus!?\" - megamind whispered aggressively as a tear fell down his eye. - \"megamin... what... have you done? i'm sorry, but...\"; megamind interrupted him with a crazed laughter: \" we... are equals now... no, no, no!!... i... am... the... god now.\"\nin a blink of an eye, megamind turned around and punched metroman with the force of a thousand suns, straight through the moon. metroman recollected himself, and took a defensive stance: \"let's talk\" - he said, as for the first time in his entire life, a drop of blood poured down his nose.\n--- part's 2,3,4,5,6 are on my community posts here on youtube ---",
+        "combined_score": -0.3022,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "from this list it sounds like you don't even know how to program properly using rust in neovim",
+        "combined_score": 0.18425,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "strange, you're a meathead, but also a 500 ton linux enjoyer, something is off",
+        "combined_score": 0.30515000000000003,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "3:47 \"i didn't like how i put recursion in c\" into \"so we're just going to have to put that in c\" while simultaniously putting it in b was unintentially the greatest joke haha!",
+        "combined_score": 0.4838,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "this finna have 1m views very soon",
+        "combined_score": 0.2974,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursion recursionrecursion recursion recursion recursion recursion recursion recursion recursion",
+        "combined_score": 0.11385,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "i have to write an assignment on statistics in math. your rating of it actually being useful has given me hope",
+        "combined_score": 0.6468,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "this guy",
+        "combined_score": 0.069,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "c in s tier, and java in e tier. clearly, this guy hasn't worked in industry, most of the jobs you'll fine are either c# or java.",
+        "combined_score": 0.30365,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "didn't even mention programmer socks or p!=np 0/10 do this after finishing your first semester at least lil bro",
+        "combined_score": 0.0343,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "yapping over fnaf 1 ambience has never been this cool",
+        "combined_score": 0.6198,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "started out strong with that c ranking, really fell off with the hashtable ranking, and completely lost me with the vim ranking. 11/10",
+        "combined_score": 0.15155000000000002,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "0:57 um, are you sure those bounds of integration are supposed to be there?",
+        "combined_score": 0.17385,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "hey can you send the template link for this i want to make one like this myself",
+        "combined_score": 0.43565,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "*since you look young, let me give you some advice.* it's hard to reach the \"about\" page of your channel and, even when i do, there's no email on it. without an email, there's no way to link to you for doing business.\nyour video descriptions also lack contact information, and this may make you miss out on business opportunities.",
+        "combined_score": -0.30060000000000003,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "something about india",
+        "combined_score": 0.0281,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "bro these computer sciene videos of you are banger.",
+        "combined_score": 0.33405,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "liked and subscribed last video, but didn't get notified with notification on???",
+        "combined_score": 0.2132,
+        "sentiment_label": "positive"
+    },
+    {
+        "text": "8:39 \"ima just put myself in titration tier for that one\"",
+        "combined_score": 0.0292,
+        "sentiment_label": "neutral"
+    },
+    {
+        "text": "i would have put stackoverflow on the list as titration tier",
+        "combined_score": 0.03295,
         "sentiment_label": "neutral"
     }
 ]

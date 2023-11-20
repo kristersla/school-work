@@ -25,7 +25,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     def run_try_script(self, video_id):
         try:
             # Run try.py and capture its output
-            output = subprocess.check_output(['python', 'praktiskais\\comments\\hybrid_RoB&VAD.py'], text=True)
+            output = subprocess.check_output(['python', 'praktiskais\\server\\sentiment_V&R.py'], text=True)
 
             # Construct the response message
             response_message = f'{output.strip()}'

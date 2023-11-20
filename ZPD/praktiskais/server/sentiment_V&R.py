@@ -121,7 +121,8 @@ class Detect_Language:
                     else:
                         comments_in_english.append({"text": text})
                 except Exception as _:
-                    print(f"An error occurred, empty 'text' list in comments.json")
+                    pass
+                    # print(f"An error occurred, empty 'text' list in comments.json")
 
         if comments_in_english:
             with open('praktiskais/comments/jsons/only_english.json', 'w', encoding='utf-8') as f:
@@ -268,7 +269,7 @@ class SentimentAnalyzer:
             with open(paths[label], 'w') as f:
                 json.dump(comments, f, indent=4, separators=(',', ': '))
 
-        print("Comments sorted and saved into respective JSON files.")
+        # print("Comments sorted and saved into respective JSON files.")
 
     def calculate_average_scores(self, results):
         total_positive = total_negative = total_neutral = 0
@@ -292,9 +293,12 @@ class SentimentAnalyzer:
         print(f"Average Negative: {average_negative:.2f}%")
 
 
+with open('praktiskais\server\youtube_id.json', 'r') as json_file:
+    data = json.load(json_file)
+    youtube_id = data.get('youtube_id', '')
 
 developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
-video_id = "FcN3HnQz3y4"
+video_id = youtube_id
 print("loading...")
 scrape = Scrape_Comments(developer_key)
 scrape.get_comments(video_id)
@@ -307,14 +311,14 @@ combine.mix_Rep_and_com()
 detect_lang = Detect_Language()
 detect_lang.detect_lang()
 
-print("started translating...")
+# print("started translating...")
 translate_all = Translate_All_Comments()
 translate_all.translate()
-print("done!")
+# print("done!")
 
-print("started sentiment...")
+# print("started sentiment...")
 sentiment_analyzer = SentimentAnalyzer()
 results = sentiment_analyzer.analyze_sentiments_in_json_hybrid()
 sentiment_analyzer.sort_comments_by_sentiment(results)
 sentiment_analyzer.calculate_average_scores(results)
-print("done!")
+# print("done!")
