@@ -3,30 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Extension Popup</title>
+  <title>Python Extension</title>
   <style>
     body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 20px;
       width: 300px;
-      padding: 10px;
     }
-
+    
     button {
-      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
     }
 
-    #result {
-      margin-top: 10px;
-      font-weight: bold;
+    h1 {
+      margin-top: 20px;
+      font-size: 14px; /* Adjusted font size */
+    }
+
+    #outputContainer {
+      margin-top: 20px;
+      text-align: left;
+      white-space: pre-wrap;
+      font-size: 14px; /* Adjusted font size */
     }
   </style>
+  <script src="popup.js"></script>
 </head>
 <body>
-  <h2>YouTube Video ID Extractor</h2>
-  
-  <button id="extractButton">Extract YouTube Video ID</button>
-
-  <div id="result"></div>
-
-  <script src="popup.js"></script>
+  <button id="getIdBtn">Get Video ID</button>
+  <div id="outputContainer"></div>
+  <h1 id="message"> </h1> <!-- Empty message initially -->
 </body>
 </html>

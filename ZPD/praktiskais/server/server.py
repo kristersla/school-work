@@ -1,38 +1,43 @@
-from flask import Flask, request, jsonify
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from http import HTTPStatus
 import json
+from urllib.parse import urlparse, parse_qs
 import subprocess
 
-app = Flask(__name__)
+class RequestHandler(BaseHTTPRequestHandler):
+    def _send_response(self, data):
+        self.send_response(HTTPStatus.OK)
+        self.send_header('Content-type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')  # Allow requests from any origin
+        self.end_headers()
+        self.wfile.write(json.dumps(data).encode('utf-8'))
 
-@app.route('/process', methods=['POST'])
-def process():
-    try:
-        data = request.get_json()
-        input_data = data.get('data')
+    def do_GET(self):
+        if self.path.startswith('/getData'):
+            query = parse_qs(urlparse(self.path).query)
+            video_id = query.get('video_id', [''])[0]  # Get the video_id parameter from the query string
+            with open('praktiskais\server\youtube_id.json', 'w') as json_file:
+                json.dump({"youtube_id": video_id}, json_file)
+            response_data = self.run_try_script(video_id)
+            self._send_response(response_data)
 
-        # Print the received data to the terminal
-        print(f"Received data from extension: {input_data}")
 
-        # Write the YouTube ID to a JSON file
-        with open('praktiskais\server\youtube_id.json', 'w') as json_file:
-            json.dump({"youtube_id": input_data}, json_file)
+    def run_try_script(self, video_id):
+        try:
+            # Run try.py and capture its output
+            output = subprocess.check_output(['python', 'praktiskais\\comments\\hybrid_RoB&VAD.py'], text=True)
 
-        # Execute try.py
-        filename_for_output = "praktiskais/comments/hybrid_RoB&VAD.py"
-        try_process = subprocess.Popen(["python", filename_for_output], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        try_output, try_error = try_process.communicate()
+            # Construct the response message
+            response_message = f'{output.strip()}'
 
-        if try_process.returncode == 0:
-            print(f"output: {try_output.decode('utf-8')}")
-            result = {"result": try_output.decode('utf-8')}
-        else:
-            print(f"Error running try.py: {try_error.decode('utf-8')}")
-            result = {"error": try_error.decode('utf-8')}
+            return {'message': response_message}
 
-        return jsonify(result)
-
-    except Exception as e:
-        return jsonify({"error": str(e)})
+        except Exception as e:
+            print(f"Error running try.py: {e}")
+            return {'message': f'Error running try.py: {e}'}
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    server_address = ('localhost', 8080)
+    httpd = HTTPServer(server_address, RequestHandler)
+    print('Python server is running at http://localhost:8080')
+    httpd.serve_forever()

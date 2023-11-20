@@ -1,28 +1,26 @@
 {
   "manifest_version": 2,
-  "name": "Combined Extension",
+  "name": "Python Extension",
   "version": "1.0",
-  "description": "Combined description of both extensions",
   "permissions": [
     "activeTab",
-    "http://localhost:5000/"
+    "storage"
   ],
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "background": {
     "scripts": ["background.js"],
     "persistent": false
-  },
-  "content_scripts": [
-    {
-      "matches": ["*://www.youtube.com/*"],
-      "js": ["content.js"]
-    }
-  ],
-  "icons": {
-    "48": "icon.png",
-    "128": "icon.png"
   }
 }
