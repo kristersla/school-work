@@ -1,11 +1,28 @@
 {
-    "name": "does this work?",
-    "version": "1.0.0",
-    "description": "This is a test extention",
-    "manifest_version": 3,
-    "author": "Kristers",
-    "action": {
-        "default_popup": "index.html",
-        "default_title": "does this work?"
+  "manifest_version": 2,
+  "name": "Combined Extension",
+  "version": "1.0",
+  "description": "Combined description of both extensions",
+  "permissions": [
+    "activeTab",
+    "http://localhost:5000/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
     }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
 }

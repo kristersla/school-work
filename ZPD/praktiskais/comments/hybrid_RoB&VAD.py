@@ -288,28 +288,32 @@ class SentimentAnalyzer:
         average_neutral = (total_neutral / total_entries) * 100
 
         print(f"Average Positive: {average_positive:.2f}%")
-        print(f"Average Negative: {average_negative:.2f}%")
         print(f"Average Neutral: {average_neutral:.2f}%")
+        print(f"Average Negative: {average_negative:.2f}%")
 
 
-# developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
-# video_id = "FcN3HnQz3y4"
-# print("loading...")
-# scrape = Scrape_Comments(developer_key)
-# scrape.get_comments(video_id)
-# scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
-# scrape.count_comments()
+with open('praktiskais\server\youtube_id.json', 'r') as json_file:
+    data = json.load(json_file)
+    youtube_id = data.get('youtube_id', '')
 
-# combine = Combine()
-# combine.mix_Rep_and_com()
+developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
+video_id = youtube_id
+print("loading...")
+scrape = Scrape_Comments(developer_key)
+scrape.get_comments(video_id)
+scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
+scrape.count_comments()
 
-# detect_lang = Detect_Language()
-# detect_lang.detect_lang()
+combine = Combine()
+combine.mix_Rep_and_com()
 
-# print("started translating...")
-# translate_all = Translate_All_Comments()
-# translate_all.translate()
-# print("done!")
+detect_lang = Detect_Language()
+detect_lang.detect_lang()
+
+print("started translating...")
+translate_all = Translate_All_Comments()
+translate_all.translate()
+print("done!")
 
 print("started sentiment...")
 sentiment_analyzer = SentimentAnalyzer()
