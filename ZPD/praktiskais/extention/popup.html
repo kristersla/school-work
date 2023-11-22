@@ -4,37 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Python Extension</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      margin: 20px;
-      width: 300px;
-    }
-    
-    button {
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    h1 {
-      margin-top: 20px;
-      font-size: 14px; /* Adjusted font size */
-    }
-
-    #outputContainer {
-      margin-top: 20px;
-      text-align: left;
-      white-space: pre-wrap;
-      font-size: 14px; /* Adjusted font size */
-    }
-  </style>
   <script src="popup.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button id="getIdBtn">Get Video ID</button>
-  <div id="outputContainer"></div>
-  <h1 id="message"> </h1> <!-- Empty message initially -->
+  <section class="hero">
+    <div class="hero-title">
+      <h1>SentiVibe</h1>
+      <div class="about">
+        <p>Discover real-time sentiments on any topic by using our live sentiment analysis classifier.</p>
+        <p>Uncover what others think with just a click!</p>
+      </div>
+    </div>
+    <button class="button1" id="getIdBtn">Get analyses</button>
+    <div id="outputContainer"></div>
+    <div class="loading-container" id="loadingContainer">
+      <div class="loading-text">Loading...</div>
+    </div>
+  </section>
+  <section class="results" style="display: none;">
+    <div class="around">
+      <div class="response">
+        <h1 id="message"> </h1>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

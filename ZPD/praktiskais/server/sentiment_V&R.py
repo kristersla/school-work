@@ -299,7 +299,6 @@ with open('praktiskais\server\youtube_id.json', 'r') as json_file:
 
 developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
 video_id = youtube_id
-print("loading...")
 scrape = Scrape_Comments(developer_key)
 scrape.get_comments(video_id)
 scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
