@@ -84,6 +84,16 @@ body {
     height: 280px;
 }
 .around{
+    z-index: 1;
     position: relative;
-    top: 95px;
+    top: 50px;
+}
+.results2{
+    width: 300px;
+    height: 280px;
+}
+.button2{
+    position: relative;
+    top: 70px;
+    z-index: 10;
 }

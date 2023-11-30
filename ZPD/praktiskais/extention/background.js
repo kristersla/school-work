@@ -16,6 +16,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         sendResponse({ message: 'Error fetching data' });
       });
 
-    return true;  // Indicates that the sendResponse will be called asynchronously
+    return true;
   }
 });

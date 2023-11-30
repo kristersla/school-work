@@ -20,13 +20,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Function to extract YouTube video ID from URL
+  document.getElementById('getIdBtn2').addEventListener('click', function () {
+    // Optionally, update negative here
+    // No need to set a default message here, it will be updated based on the server response
+    shownegativeHeroSection();
+  });
+
+  document.getElementById('getIdBtn3').addEventListener('click', function () {
+    // No need to set a default message here, it will be updated based on the server response
+    showneutralHeroSection();
+  });
+
+  document.getElementById('getIdBtn4').addEventListener('click', function () {
+    // No need to set a default message here, it will be updated based on the server response
+    showpositiveHeroSection();
+  });
+
   function extractVideoId(url) {
     var match = url.match(/[?&]v=([^&]+)/);
     return match ? match[1] : null;
   }
 
-  // Function to send message to background script
   function sendMessageToBackground(message, callback) {
     chrome.runtime.sendMessage(message, function (response) {
       console.log('Response received:', response);
@@ -42,8 +56,28 @@ document.addEventListener('DOMContentLoaded', function () {
           document.getElementById('outputContainer').innerText = response.output;
         }
 
-        // Show the second section
-        showSecondSection();
+        // Show the results section
+        showResultsSection();
+
+        if (response && response.negative) {
+          // Update the negative content here
+          document.getElementById('negative').innerText = response.negative;
+        } else {
+          // Handle the case when negative is not present
+          console.error('Error: Invalid or missing negative in the response');
+        }
+
+        if (response && response.neutral) {
+          document.getElementById('neutral').innerText = response.neutral;
+        } else {
+          console.error('Error: Invalid or missing neutral in the response');
+        }
+
+        if (response && response.positive) {
+          document.getElementById('positive').innerText = response.positive;
+        } else {
+          console.error('Error: Invalid or missing positive in the response');
+        }
       } else {
         document.getElementById('message').innerText = 'Error: Invalid response';
         console.error('Invalid or missing response:', response);
@@ -55,22 +89,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Function to show the loading screen
   function showLoadingScreen() {
     document.getElementById('loadingContainer').style.display = 'flex';
   }
 
-  // Function to hide the loading screen
   function hideLoadingScreen() {
     document.getElementById('loadingContainer').style.display = 'none';
   }
 
-  // Function to show the second section
-  function showSecondSection() {
+  function showResultsSection() {
     // Hide the first section
     document.querySelector('.hero').style.display = 'none';
 
-    // Show the second section
+    // Show the results section
     document.querySelector('.results').style.display = 'block';
   }
+
+  function shownegativeHeroSection() {
+    // Hide the results section
+    document.querySelector('.results').style.display = 'none';
+
+    // Show the negativeHero section
+    document.querySelector('.negativeHero').style.display = 'block';
+  }
+
+  function showneutralHeroSection() {
+    // Hide the results section
+    document.querySelector('.results').style.display = 'none';
+
+    document.querySelector('.neutralHero').style.display = 'block';
+  }
+
+  function showpositiveHeroSection() {
+    // Hide the results section
+    document.querySelector('.results').style.display = 'none';
+
+    document.querySelector('.positiveHero').style.display = 'block';
+  }
+
+
 });

@@ -27,10 +27,18 @@ class RequestHandler(BaseHTTPRequestHandler):
             # Run try.py and capture its output
             output = subprocess.check_output(['python', 'praktiskais\\server\\sentiment_V&R.py'], text=True)
 
-            # Construct the response message
-            response_message = f'{output.strip()}'
+            negative_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Negative.py'], text=True)
 
-            return {'message': response_message}
+            neutral_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Neutral.py'], text=True)
+
+            positive_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Positive.py'], text=True)
+
+            response_message = f'{output.strip()}'
+            negative = f'{negative_output.strip()}'
+            neutral = f'{neutral_output.strip()}'
+            positives = f'{positive_output.strip()}'
+
+            return {'message': response_message, 'negative': negative, 'neutral': neutral, 'positive': positives}
 
         except Exception as e:
             print(f"Error running try.py: {e}")

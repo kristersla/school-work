@@ -12,22 +12,35 @@
     <div class="hero-title">
       <h1>SentiVibe</h1>
       <div class="about">
-        <p>Discover real-time sentiments on any topic by using our live sentiment analysis classifier.</p>
-        <p>Uncover what others think with just a click!</p>
+        <p>Izpēti ko citi domā par šo tēmu ar sentimenta nolasīšanas klasifikatoru.</p>
+        <p>Atklājiet, ko citi domā tikai ar vienu klikšķi!</p>
       </div>
     </div>
-    <button class="button1" id="getIdBtn">Get analyses</button>
+    <button class="button1" id="getIdBtn">Nolasīt</button>
     <div id="outputContainer"></div>
     <div class="loading-container" id="loadingContainer">
-      <div class="loading-text">Loading...</div>
+      <div class="loading-text">Lādējas...</div>
     </div>
   </section>
   <section class="results" style="display: none;">
+    <h1>Rezultāti</h1>
     <div class="around">
       <div class="response">
         <h1 id="message"> </h1>
       </div>
     </div>
+    <button class="button2" id="getIdBtn2">Negative</button>
+    <button class="button2" id="getIdBtn3">Neutral</button>
+    <button class="button2" id="getIdBtn4">Positive</button>
+  </section>
+  <section class="negativeHero" style="display: none;">
+    <h1 id="negative"> </h1> 
+  </section>
+  <section class="neutralHero" style="display: none;">
+    <h1 id="neutral"> </h1> 
+  </section>
+  <section class="positiveHero" style="display: none;">
+    <h1 id="positive"> </h1> 
   </section>
 </body>
 </html>

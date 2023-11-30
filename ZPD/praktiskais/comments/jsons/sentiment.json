@@ -1,87 +1,37 @@
 [
     {
-        "text": "sakfafkfa/asdhnk ha \\ hsagdhjaghdj",
-        "combined_score": 0.188,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "sahdadk < letter a ajsdhdka",
-        "combined_score": 0.02965,
+        "text": "don't ever say anything again",
+        "combined_score": 0.0027,
         "sentiment_label": "neutral"
     },
     {
-        "text": "<herf a ajsdhdkasldfaf",
-        "combined_score": 0.0252,
-        "sentiment_label": "neutral"
-    },
-    {
-        "text": "yes no way!",
-        "combined_score": 0.23675000000000002,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "add this \"",
-        "combined_score": 0.06205,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "should be a good game soon",
-        "combined_score": 0.7121999999999999,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "it's a shame that 2020 wasn't a good game, because now it's not sad either",
-        "combined_score": -0.21045,
+        "text": "kapec here are public, this nav is cruel",
+        "combined_score": -0.28959999999999997,
         "sentiment_label": "negative"
     },
     {
-        "text": "it works well",
-        "combined_score": 0.5569999999999999,
+        "text": "you should not upload content like this",
+        "combined_score": -0.1358,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "i hate this",
+        "combined_score": -0.2819,
+        "sentiment_label": "negative"
+    },
+    {
+        "text": "yes, this is epic!",
+        "combined_score": 0.7181,
         "sentiment_label": "positive"
     },
     {
-        "text": "Strada",
-        "combined_score": 0.10615,
+        "text": "this is working!",
+        "combined_score": 0.46875,
         "sentiment_label": "positive"
     },
     {
-        "text": "works",
-        "combined_score": 0.11875,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "works",
-        "combined_score": 0.11875,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "is it working?",
-        "combined_score": 0.03965,
-        "sentiment_label": "neutral"
-    },
-    {
-        "text": "brother",
-        "combined_score": 0.1001,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "interesting point of view",
-        "combined_score": 0.5578,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "this finally works!",
-        "combined_score": 0.4694,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "everything is working perfectly",
-        "combined_score": 0.77595,
-        "sentiment_label": "positive"
-    },
-    {
-        "text": "dammn that was 3 years ago",
-        "combined_score": 0.0268,
+        "text": "this is in english",
+        "combined_score": 0.0479,
         "sentiment_label": "neutral"
     }
 ]

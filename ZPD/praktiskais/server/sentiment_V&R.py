@@ -61,7 +61,7 @@ class Scrape_Comments:
     
     def count_comments(self):
         total_comments = len(self.comments)
-        print(f"Total Comments: {total_comments}")
+        print(f"Comments analyzed: {total_comments}\n")
 
 
 class Combine:
