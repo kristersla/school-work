@@ -1,0 +1,15 @@
+- Wolfram sentiment analysis 
+- Scipy, Matplotlib, Scikit-learn, NLTK in Python - https://oishi-poddar.netlify.app/project/sentiment_analysis/
+- Naive Bayes algorithm - https://oishi-poddar.netlify.app/project/sentiment_analysis/
+- https://link.springer.com/chapter/10.1007/978-3-030-20912-4_51
+- TextBlob and Pattern libraries to calculate the sentiment polarity per comment, then averaged them per video to get a general polarity score. Sentiment Analysis: The comments are analyzed for sentiment using two libraries, TextBlob, and the pre-trained BERT model. Sentiment polarity is evaluated. - https://www.rodrigochavez.com/bert-sentiment-analysis-on-youtube-comments/
+- Random-Forest, and Word2Vec Skip-gram - http://jurnal.upnyk.ac.id/index.php/telematika/article/view/4493
+- Sentimental Analysis using SerpApi - https://serpapi.com/blog/scrap-youtube-comments-for-sentimental-analysis/
+- https://github.com/PatilMrudu/Youtube-Comments-Sentimental-Analysis/blob/main/README.md
+- Naïve-Bayes, Support Vector Machine, Logistic Regression, Decision Tree, etc -https://ritikasingh95.github.io/Documents/Publications/YOUTUBE%20COMMENTS%20SENTIMENT%20ANALYSIS.pdf
+- https://www.diva-portal.org/smash/get/diva2:1593439/FULLTEXT01.pdf
+
+
+https://www.youtube.com/watch?v=zt3qE7Xt7-A
+https://www.codecademy.com/paths/machine-learning-engineer/tracks/mle-machine-learning-fundamentals/modules/mle-introduction-to-machine-learning/lessons/mlfun-why-machine-learning/exercises/what-is-machine-learning
+https://www.codecademy.com/paths/machine-learning-engineer/tracks/mle-machine-learning-fundamentals/modules/mle-introduction-to-machine-learning/lessons/mlfun-why-machine-learning/exercises/begin-your-journey

@@ -1,0 +1,27 @@
+1. https://aveni.ai/history-of-natural-language-processing/
+2. https://www.ibm.com/topics/natural-language-processing
+3. https://www.foreseemed.com/natural-language-processing-in-healthcare#:~:text=NLP%20negation%20in%20healthcare%20is,have%20a%20condition%20or%20symptom.
+4. https://www.techtarget.com/searchbusinessanalytics/definition/opinion-mining-sentiment-mining
+5. https://www.sciencedirect.com/science/article/pii/S0957417423003639
+6. https://www.voiceform.com/blog-posts/sentiment-analysis
+7. https://www.repustate.com/blog/sentiment-analysis-data-source/
+8. https://medium.com/analytics-vidhya/data-collection-and-annotation-measures-for-sentiment-analysis-767da1dd4272
+9. https://dataconomy.com/2023/07/28/data-preprocessing-steps-requirements/
+10. https://monkeylearn.com/data-cleaning/
+11. https://monkeylearn.com/blog/data-cleaning-techniques/
+12. https://arize.com/blog-course/tokenization/#:~:text=It%20involves%20breaking%20down%20a,entity%20recognition%2C%20and%20text%20classification.
+13. https://nlpcloud.com/lv/nlp-tokenization-api.html
+14. https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html
+15. https://analyticsindiamag.com/when-to-use-negation-handling-in-sentiment-analysis/#:~:text=Negation%20handling%20is%20a%20method,vicinity%20or%20scope%20of%20negation.
+16.https://monkeylearn.com/blog/sentiment-analysis-machine-learning/
+17. https://monkeylearn.com/sentiment-analysis/
+18. https://www.analyticsvidhya.com/blog/2021/06/rule-based-sentiment-analysis-in-python/
+19. https://monkeylearn.com/sentiment-analysis/#:~:text=Automatic%20Approaches,positive%2C%20negative%2C%20or%20neutral
+20. https://www.octoparse.com/blog/youtube-comment-scraper
+21. https://www.mulesoft.com/resources/api/what-is-an-api
+22. https://developers.google.com/youtube/v3/docs/comments#:~:text=The%20snippet%20object%20contains%20basic%20details%20about%20the%20comment.&text=The%20display%20name%20of%20the%20user%20who%20posted%20the%20comment.&text=The%20URL%20for%20the%20avatar%20of%20the%20user%20who%20posted%20the%20comment.&text=The%20URL%20of%20the%20comment%20author's%20YouTube%20channel%2C%20if%20available.
+23. https://www.zyte.com/learn/what-is-web-scraping/
+24. https://www.quora.com/Is-scraping-YouTube-legal
+25. https://github.com/cjhutto/vaderSentiment
+26. https://www.comet.com/site/blog/roberta-a-modified-bert-model-for-nlp/#:~:text=An%20open%2Dsource%20machine%20learning,Facebook%20in%20the%20year%202019.
+27. https://github.com/topics/vader-vs-roberta

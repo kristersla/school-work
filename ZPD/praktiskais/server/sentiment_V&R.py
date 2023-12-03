@@ -55,8 +55,8 @@ class Scrape_Comments:
             else:
                 request = None
 
-    def save_comments_to_json(self, filename):
-        with open(filename, 'w', encoding='utf-8') as f:
+    def save_comments_to_json(self):
+        with open('praktiskais/comments/jsons/comments.json', 'w', encoding='utf-8') as f:
             json.dump(self.comments, f, ensure_ascii=False, indent=4)
     
     def count_comments(self):
@@ -64,8 +64,8 @@ class Scrape_Comments:
         print(f"Comments analyzed: {total_comments}\n")
 
 
-class Combine:
-    def mix_Rep_and_com(self):
+class Cleaing:
+    def clean_text(self):
         with open('praktiskais/comments/jsons/comments.json', 'r', encoding='utf-8') as f:
             comments_data = json.load(f)
 
@@ -94,9 +94,6 @@ class Combine:
         for comment in comments_data:
             cleaned_text = remove_mentions(remove_links(comment["text"]))
             output_data.append({"text": clean(cleaned_text, no_emoji=True)})
-            for reply in comment.get("replies", []):
-                cleaned_reply = remove_mentions(remove_links(reply))
-                output_data.append({"text": clean(cleaned_reply, no_emoji=True)})
 
         with open('praktiskais/comments/jsons/mix_C&R.json', 'w', encoding='utf-8') as file:
             json.dump(output_data, file, indent=4, ensure_ascii=False)
@@ -122,7 +119,6 @@ class Detect_Language:
                         comments_in_english.append({"text": text})
                 except Exception as _:
                     pass
-                    # print(f"An error occurred, empty 'text' list in comments.json")
 
         if comments_in_english:
             with open('praktiskais/comments/jsons/only_english.json', 'w', encoding='utf-8') as f:
@@ -288,9 +284,9 @@ class SentimentAnalyzer:
         average_negative = (total_negative / total_entries) * 100
         average_neutral = (total_neutral / total_entries) * 100
 
-        print(f"Average Positive: {average_positive:.2f}%")
-        print(f"Average Neutral: {average_neutral:.2f}%")
-        print(f"Average Negative: {average_negative:.2f}%")
+        print(f"Positive: {average_positive:.2f}%")
+        print(f"Neutral: {average_neutral:.2f}%")
+        print(f"Negative: {average_negative:.2f}%")
 
 
 with open('praktiskais\server\youtube_id.json', 'r') as json_file:
@@ -301,11 +297,11 @@ developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
 video_id = youtube_id
 scrape = Scrape_Comments(developer_key)
 scrape.get_comments(video_id)
-scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
+scrape.save_comments_to_json()
 scrape.count_comments()
 
-combine = Combine()
-combine.mix_Rep_and_com()
+Cleaing = Cleaing()
+Cleaing.clean_text()
 
 detect_lang = Detect_Language()
 detect_lang.detect_lang()

@@ -1,5 +1,3 @@
-console.log('Popup script executed.');
-
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOMContentLoaded event received.');
 
@@ -12,7 +10,27 @@ document.addEventListener('DOMContentLoaded', function () {
       var videoId = extractVideoId(tab.url);
 
       if (videoId) {
-        sendMessageToBackground({ action: 'getData', video_id: videoId });
+        sendMessageToBackground({ action: 'getData', video_id: videoId }, function (response) {
+          if (response && response.message) {
+            document.getElementById('message').innerText = response.message;
+
+            // Optionally, update the output container
+            if (response.output) {
+              document.getElementById('outputContainer').innerText = response.output;
+            }
+
+            // Include the video title in your output
+            if (response.videoTitle) {
+              document.getElementById('videoTitle').innerText = `${response.videoTitle}`;
+            }
+
+            // Show the results section
+            showResultsSection();
+          } else {
+            document.getElementById('message').innerText = 'Error: Invalid response';
+            console.error('Invalid or missing response:', response);
+          }
+        });
       } else {
         hideLoadingScreen(); // Hide loading screen in case of an error
         document.getElementById('message').innerText = 'Error: Video ID not found';
@@ -34,6 +52,21 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('getIdBtn4').addEventListener('click', function () {
     // No need to set a default message here, it will be updated based on the server response
     showpositiveHeroSection();
+  });
+
+  document.getElementById('getIdBtn5').addEventListener('click', function () {
+    // No need to set a default message here, it will be updated based on the server response
+    showHeroSection();
+  });
+
+  document.getElementById('getIdBtn6').addEventListener('click', function () {
+    // No need to set a default message here, it will be updated based on the server response
+    showHero2Section();
+  });
+
+  document.getElementById('getIdBtn7').addEventListener('click', function () {
+    // No need to set a default message here, it will be updated based on the server response
+    showHero3Section();
   });
 
   function extractVideoId(url) {
@@ -125,6 +158,27 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.results').style.display = 'none';
 
     document.querySelector('.positiveHero').style.display = 'block';
+  }
+
+  function showHeroSection() {
+    // Hide the results section
+    document.querySelector('.negativeHero').style.display = 'none';
+
+    document.querySelector('.results').style.display = 'block';
+  }
+
+  function showHero2Section() {
+    // Hide the results section
+    document.querySelector('.neutralHero').style.display = 'none';
+
+    document.querySelector('.results').style.display = 'block';
+  }
+
+  function showHero3Section() {
+    // Hide the results section
+    document.querySelector('.positiveHero').style.display = 'none';
+
+    document.querySelector('.results').style.display = 'block';
   }
 
 

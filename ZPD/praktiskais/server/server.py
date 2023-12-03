@@ -8,14 +8,14 @@ class RequestHandler(BaseHTTPRequestHandler):
     def _send_response(self, data):
         self.send_response(HTTPStatus.OK)
         self.send_header('Content-type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')  # Allow requests from any origin
+        self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
         self.wfile.write(json.dumps(data).encode('utf-8'))
 
     def do_GET(self):
         if self.path.startswith('/getData'):
             query = parse_qs(urlparse(self.path).query)
-            video_id = query.get('video_id', [''])[0]  # Get the video_id parameter from the query string
+            video_id = query.get('video_id', [''])[0]
             with open('praktiskais\server\youtube_id.json', 'w') as json_file:
                 json.dump({"youtube_id": video_id}, json_file)
             response_data = self.run_try_script(video_id)
@@ -24,7 +24,6 @@ class RequestHandler(BaseHTTPRequestHandler):
 
     def run_try_script(self, video_id):
         try:
-            # Run try.py and capture its output
             output = subprocess.check_output(['python', 'praktiskais\\server\\sentiment_V&R.py'], text=True)
 
             negative_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Negative.py'], text=True)

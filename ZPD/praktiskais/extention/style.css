@@ -86,7 +86,7 @@ body {
 .around{
     z-index: 1;
     position: relative;
-    top: 50px;
+    top: 25px;
 }
 .results2{
     width: 300px;
@@ -96,4 +96,48 @@ body {
     position: relative;
     top: 70px;
     z-index: 10;
+}
+.video-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.response{
+    font-size: 16px;
+    font-weight: 500;
+}
+.sentiment-score{
+    padding: 17px 0px 0px 0px;
+}
+.buttons-sent{
+    position: relative;
+    bottom: 21px;
+}
+.button2{
+    background-color: #3e6351;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    box-sizing: border-box;
+    color: #d5f3e3;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10px;
+    flex: 0 0 auto;
+    line-height: 1.5rem;
+    padding: 0px 5px 0px 5px;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+.button2:hover {
+    background-color: #294D4A;
+    color: #d5f3e3;
+    border: 1px solid #f5f5f5;
 }
