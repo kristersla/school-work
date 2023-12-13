@@ -21,16 +21,15 @@ class RequestHandler(BaseHTTPRequestHandler):
             response_data = self.run_try_script(video_id)
             self._send_response(response_data)
 
-
     def run_try_script(self, video_id):
         try:
-            output = subprocess.check_output(['python', 'praktiskais\\server\\sentiment_V&R.py'], text=True)
+            output = subprocess.check_output(['python', 'praktiskais\\server\\sentiment_V&R.py'], text=True, encoding='utf-8')
 
-            negative_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Negative.py'], text=True)
+            negative_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Negative.py'], text=True, encoding='utf-8')
 
-            neutral_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Neutral.py'], text=True)
+            neutral_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Neutral.py'], text=True, encoding='utf-8')
 
-            positive_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Positive.py'], text=True)
+            positive_output = subprocess.check_output(['python', 'praktiskais\\server\\classifications\\Positive.py'], text=True, encoding='utf-8')
 
             response_message = f'{output.strip()}'
             negative = f'{negative_output.strip()}'

@@ -189,7 +189,7 @@ class SentimentAnalyzer:
 
         return result_item
 
-    def analyze_sentiment_hybrid(self, text, comment_id, like_count, author):
+    def analyze_sentiment_hybrid(self, text, comment_id):
         # Analyze sentiment using RoBERTa
         inputs = self.tokenizer(text, return_tensors='pt', truncation=True, max_length=512)
         output = self.model(**inputs)
@@ -222,9 +222,7 @@ class SentimentAnalyzer:
             "text": text,
             "combined_score": combined_score,
             "sentiment_label": sentiment_label,
-            "id": comment_id,
-            "like_count": like_count,
-            "author": author
+            "id": comment_id
         }
 
         return result_item_hybrid
@@ -237,11 +235,8 @@ class SentimentAnalyzer:
         for item in data:
             text = item.get('text', '')
             comment_id = item.get('id', '')
-            like_count = item.get('like_count', 0)
-            author_orgin = item.get('author', '')
-
             if text:
-                result_item = self.analyze_sentiment_hybrid(text, comment_id, like_count, author_orgin)
+                result_item = self.analyze_sentiment_hybrid(text, comment_id)
                 sentiment_results.append(result_item)
 
         with open(self.OUTPUT_FILE, 'w') as json_output_file:
@@ -257,11 +252,7 @@ class SentimentAnalyzer:
             for comment in original_comments_data:
                 comment_id = comment.get('id')
                 if comment_id is not None:
-                    original_comments[comment_id] = {
-                        'original_text': comment.get('original_text', ''),
-                        'like_count': comment.get('like_count', 0),
-                        'author': comment.get('author', '')
-                    }
+                    original_comments[comment_id] = comment.get('original_text', '')
 
         positive_comments = []
         neutral_comments = []
@@ -270,21 +261,16 @@ class SentimentAnalyzer:
         for result in results:
             sentiment_label = result['sentiment_label']
             comment_id = result.get('id', '')
-            if comment_id in original_comments:
-                original_text = original_comments[comment_id]['original_text']
-                like_count = original_comments[comment_id]['like_count']
-                author_orgin = original_comments[comment_id]['author']
-            else:
-                original_text = ''
-                like_count = 0
-                author_orgin = ''
+
+            # Retrieve original text using comment_id
+            original_text = original_comments.get(comment_id, '')
 
             if sentiment_label == 'positive':
-                positive_comments.append({"text": original_text, "id": comment_id, "like_count": like_count, "author": author_orgin})
+                positive_comments.append({"text": original_text, "id": comment_id})
             elif sentiment_label == 'neutral':
-                neutral_comments.append({"text": original_text, "id": comment_id, "like_count": like_count, "author": author_orgin})
+                neutral_comments.append({"text": original_text, "id": comment_id})
             elif sentiment_label == 'negative':
-                negative_comments.append({"text": original_text, "id": comment_id, "like_count": like_count, "author": author_orgin})
+                negative_comments.append({"text": original_text, "id": comment_id})
 
         paths = {
             'positive': 'praktiskais/sentiment/positive.json',
@@ -296,6 +282,7 @@ class SentimentAnalyzer:
             with open(paths[label], 'w', encoding='utf-8') as f:
                 json.dump(comments, f, indent=4, separators=(',', ': '), ensure_ascii=False)
 
+        # print("Comments sorted and saved into respective JSON files.")
 
     def calculate_average_scores(self, results):
         total_positive = total_negative = total_neutral = 0
@@ -323,23 +310,27 @@ with open('praktiskais\server\youtube_id.json', 'r') as json_file:
     data = json.load(json_file)
     youtube_id = data.get('youtube_id', '')
 
-developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
-video_id = youtube_id
-scrape = Scrape_Comments(developer_key)
-scrape.get_comments(video_id)
-scrape.save_comments_to_json()
-scrape.count_comments()
+# developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
+# video_id = youtube_id
+# scrape = Scrape_Comments(developer_key)
+# scrape.get_comments(video_id)
+# scrape.save_comments_to_json()
+# scrape.count_comments()
 
-Cleaing = Cleaing()
-Cleaing.clean_text()
+# Cleaing = Cleaing()
+# Cleaing.clean_text()
 
-detect_lang = Detect_Language()
-detect_lang.detect_lang()
+# detect_lang = Detect_Language()
+# detect_lang.detect_lang()
 
-translate_all = Translate_All_Comments()
-translate_all.translate()
+# print("started translating...")
+# translate_all = Translate_All_Comments()
+# translate_all.translate()
+# print("done!")
 
+print("started sentiment...")
 sentiment_analyzer = SentimentAnalyzer()
 results = sentiment_analyzer.analyze_sentiments_in_json_hybrid()
 sentiment_analyzer.sort_comments_by_sentiment(results)
 sentiment_analyzer.calculate_average_scores(results)
+print("done!")

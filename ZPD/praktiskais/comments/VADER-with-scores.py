@@ -2,11 +2,26 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from googletrans import Translator
 from scipy.special import softmax
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score, confusion_matrix
 import googleapiclient.discovery
 from langdetect import detect
 from cleantext import clean
 import json
 import re
+
+class SentimentModel:
+    def __init__(self, model_name, tokenizer_name):
+        self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+
+    def classify_sentiment(self, text):
+        inputs = self.tokenizer(text, return_tensors="pt", truncation=True)
+        outputs = self.model(**inputs)
+        logits = outputs.logits
+        probabilities = softmax(logits.detach().numpy(), axis=1)
+        predicted_class = int(probabilities.argmax(axis=1)[0])
+        return predicted_class
 
 class Scrape_Comments:
     def __init__(self, developer_key):
@@ -200,6 +215,11 @@ class SentimentAnalyzer:
         print(f"Negative: {negative_percentage:.2f}%")
         print("Data saved successfully.")
 
+# Initialize SentimentModel
+model_name = "nlptown/bert-base-multilingual-uncased-sentiment"
+tokenizer_name = "nlptown/bert-base-multilingual-uncased-sentiment"
+sentiment_model = SentimentModel(model_name, tokenizer_name)
+
 developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
 video_id = "SzXOq1Q1J1Y"
 print("loading...")
@@ -220,6 +240,29 @@ translate_all.translate()
 print("done!")
 
 print("started sentiment...")
-sentiment_analyzer = SentimentAnalyzer()
-sentiment_analyzer.analyze_sentiments_in_json()
+
+# Perform sentiment classification
+with open('praktiskais/comments/jsons/translated.json', 'r', encoding='utf-8') as f:
+    comments_data = json.load(f)
+
+X = [comment['text'] for comment in comments_data]
+y = [sentiment_model.classify_sentiment(text) for text in X]
+
+# Split the data for cross-validation
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train your model (not included in this example, you may want to use a library like scikit-learn or transformers)
+
+# Evaluate F1-Score
+y_pred = [sentiment_model.classify_sentiment(text) for text in X_test]
+f1 = f1_score(y_test, y_pred, average='weighted')
+print(f"F1-Score: {f1}")
+
+# Display Confusion Matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+print("Confusion Matrix:")
+print(conf_matrix)
+
+# Perform Cross-Validation (not included in this example)
+
 print("done!")

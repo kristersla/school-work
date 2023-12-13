@@ -1,4 +1,6 @@
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from sklearn.metrics import f1_score, confusion_matrix
+from sklearn.model_selection import train_test_split
 from googletrans import Translator
 from scipy.special import softmax
 import googleapiclient.discovery
@@ -57,7 +59,6 @@ class Scrape_Comments:
     def count_comments(self):
         total_comments = len(self.comments)
         print(f"Total Comments: {total_comments}")
-
 
 class Combine:
     def mix_Rep_and_com(self):
@@ -198,9 +199,14 @@ class SentimentAnalyzer:
         with open(self.OUTPUT_FILE, 'w') as json_output_file:
             json.dump(sentiment_results, json_output_file, indent=4, separators=(',', ': '))
 
-class overall:
-    def calculate_sentiment():
-        with open('praktiskais\comments\jsons\sentiment.json', 'r') as file:
+class Overall:
+    def __init__(self):
+        self.INPUT_FILE = 'praktiskais/comments/jsons/sentiment.json'
+        self.true_labels = []
+        self.predicted_labels = []
+
+    def calculate_sentiment(self):
+        with open(self.INPUT_FILE, 'r') as file:
             sentiment_data = json.load(file)
 
         highest_positive_values = []
@@ -232,7 +238,6 @@ class overall:
         else:
             average_highest_negative = 0
 
-
         labels_counts = {
             'positive': len(highest_positive_values),
             'neutral': len(highest_neutral_values),
@@ -244,7 +249,6 @@ class overall:
 
         overall_sentiment = max(average_highest_positive, average_highest_neutral, average_highest_negative)
 
-
         if overall_sentiment == average_highest_positive:
             sentiment_label = 'positive'
         elif overall_sentiment == average_highest_neutral:
@@ -252,14 +256,12 @@ class overall:
         else:
             sentiment_label = 'negative'
 
-
         if sentiment_label == 'positive':
             sentiment_count = len(highest_positive_values)
         elif sentiment_label == 'neutral':
             sentiment_count = len(highest_neutral_values)
         else:
             sentiment_count = len(highest_negative_values)
-
 
         print(f'Total highest positive values: {sum(highest_positive_values)}')
         print(f'Number of highest positive entries: {len(highest_positive_values)}')
@@ -276,20 +278,17 @@ class overall:
         comments = [entry['text'] for entry in sentiment_data]
 
         total_comment_count = len(comments)
-        com_multy = (max_count/total_comment_count)*100
+        com_multy = (max_count / total_comment_count) * 100
         portion_of_com = round(com_multy, 2)
 
-        portion_of_com_positive = round(len(highest_positive_values)/total_comment_count, 2)
-        portion_of_com_neutral = round(len(highest_neutral_values)/total_comment_count, 2)
-        portion_of_com_negative = round(len(highest_negative_values)/total_comment_count, 2)
+        portion_of_com_positive = round(len(highest_positive_values) / total_comment_count, 2)
+        portion_of_com_neutral = round(len(highest_neutral_values) / total_comment_count, 2)
+        portion_of_com_negative = round(len(highest_negative_values) / total_comment_count, 2)
 
         print(f'on its own - Sentiment of the video is {max_label}: {portion_of_com}%\n')
 
-
         print(f'Sentiment of the video for positive: {portion_of_com_positive}%')
-
         print(f'Sentiment of the video for neutral: {portion_of_com_neutral}%')
-
         print(f'Sentiment of the video for negative: {portion_of_com_negative}%')
 
         highest_positive_comments = []
@@ -315,6 +314,43 @@ class overall:
         with open('praktiskais/sentiment/negative.json', 'w') as file:
             json.dump(highest_negative_comments, file, indent=4)
 
+    def scores(self):
+        with open(self.INPUT_FILE, 'r') as file:
+            sentiment_data = json.load(file)
+
+        for entry in sentiment_data:
+            max_sentiment = max(entry, key=lambda k: entry[k] if k != 'text' else 0)
+
+            # Convert true labels to integers
+            if max_sentiment == 'positive':
+                self.true_labels.append(2)  # Assuming positive is labeled as 2
+            elif max_sentiment == 'neutral':
+                self.true_labels.append(1)  # Assuming neutral is labeled as 1
+            elif max_sentiment == 'negative':
+                self.true_labels.append(0)  # Assuming negative is labeled as 0
+
+            # Convert predicted labels to integers
+            if max_sentiment == 'positive':
+                self.predicted_labels.append(2)  # Assuming positive is labeled as 2
+            elif max_sentiment == 'neutral':
+                self.predicted_labels.append(1)  # Assuming neutral is labeled as 1
+            elif max_sentiment == 'negative':
+                self.predicted_labels.append(0)  # Assuming negative is labeled as 0
+
+        # Convert lists to NumPy arrays
+        self.true_labels = np.array(self.true_labels)
+        self.predicted_labels = np.array(self.predicted_labels)
+
+        # Calculate F1-Score
+        f1 = f1_score(self.true_labels, self.predicted_labels, average='weighted')
+        print(f"F1-Score: {f1}")
+
+        # Calculate and print Confusion Matrix
+        conf_matrix = confusion_matrix(self.true_labels, self.predicted_labels)
+        print("Confusion Matrix:")
+        print(conf_matrix)
+
+
 developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
 video_id = "SzXOq1Q1J1Y"
 print("loading...")
@@ -338,6 +374,8 @@ print("started sentiment...")
 sentiment_analyzer = SentimentAnalyzer()
 sentiment_analyzer.analyze_sentiments_in_json()
 
-sentiment_overall = overall()
-overall.calculate_sentiment()
+sentiment_overall = Overall()
+sentiment_overall.calculate_sentiment()
+sentiment_overall.scores()
+
 print("done!")
