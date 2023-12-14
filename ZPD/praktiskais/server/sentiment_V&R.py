@@ -203,14 +203,11 @@ class SentimentAnalyzer:
             label = self.labels[ranking_roberta[i]]
             score = np.round(float(scores_roberta[ranking_roberta[i]]), 4)
             result_item_roberta[label] = score
-
-        # Analyze sentiment using VADER
+  
         sentiment_scores = self.analyzer.polarity_scores(text)
         
-        # Combine the scores (You can choose your own logic here)
         combined_score = (result_item_roberta['positive'] + sentiment_scores['compound']) / 2
 
-        # Determine the sentiment label based on the combined score
         if combined_score >= 0.05:
             sentiment_label = 'positive'
         elif combined_score <= -0.05:

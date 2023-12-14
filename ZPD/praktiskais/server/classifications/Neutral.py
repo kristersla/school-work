@@ -7,6 +7,8 @@ file_path = 'praktiskais\\sentiment\\neutral.json'
 with open(file_path, 'r', encoding='utf-8') as file:
     data = json.load(file)
 
-for item in data:
+sorted_data = sorted(data, key=lambda item: item['like_count'], reverse=True)
+
+for item in sorted_data:
     print(f"{item['author']}: '{item['text']}'")
-    print(f"likes: {str(item['like_count'])}"+ "\n")
+    print(f"patīk: {str(item['like_count'])}"+ "\n")
