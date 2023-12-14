@@ -8,3 +8,6 @@
 - https://github.com/PatilMrudu/Youtube-Comments-Sentimental-Analysis/blob/main/README.md
 - Naïve-Bayes, Support Vector Machine, Logistic Regression, Decision Tree, etc -https://ritikasingh95.github.io/Documents/Publications/YOUTUBE%20COMMENTS%20SENTIMENT%20ANALYSIS.pdf
 - https://www.diva-portal.org/smash/get/diva2:1593439/FULLTEXT01.pdf
+
+
+https://www.youtube.com/watch?v=qHUDshF8Pb8
