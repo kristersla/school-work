@@ -30,11 +30,11 @@ class Scrape_Comments:
             maxResults=max_results,
             textFormat='plainText'
         )
-
+        comment_id = 1
         while request is not None:
             response = request.execute()
-            comment_id = 1
             for item in response['items']:
+                
                 comment = item['snippet']['topLevelComment']['snippet']
                 self.comments.append({
                     'author': comment['authorDisplayName'],
@@ -44,7 +44,7 @@ class Scrape_Comments:
                     'original_text': comment['textDisplay'],
                     'id': comment_id
                 })
-                comment_id +=1
+                comment_id += 1
 
             if 'nextPageToken' in response:
                 request = self.youtube.commentThreads().list(
@@ -172,23 +172,6 @@ class SentimentAnalyzer:
             labels = [row[1] for row in csvreader if len(row) > 1]
         return labels
 
-    def analyze_sentiment(self, text):
-        inputs = self.tokenizer(text, return_tensors='pt', truncation=True, max_length=512)
-        output = self.model(**inputs)
-        scores = output.logits[0].detach().numpy()
-        scores = softmax(scores)
-
-        ranking = np.argsort(scores)
-        ranking = ranking[::-1]
-        result_item = {"text": text}
-
-        for i in range(scores.shape[0]):
-            label = self.labels[ranking[i]]
-            score = np.round(float(scores[ranking[i]]), 4)
-            result_item[label] = score
-
-        return result_item
-
     def analyze_sentiment_hybrid(self, text, comment_id, like_count, author):
         # Analyze sentiment using RoBERTa
         inputs = self.tokenizer(text, return_tensors='pt', truncation=True, max_length=512)
@@ -203,11 +186,14 @@ class SentimentAnalyzer:
             label = self.labels[ranking_roberta[i]]
             score = np.round(float(scores_roberta[ranking_roberta[i]]), 4)
             result_item_roberta[label] = score
-  
+
+        # Analyze sentiment using VADER
         sentiment_scores = self.analyzer.polarity_scores(text)
         
+        # Combine the scores (You can choose your own logic here)
         combined_score = (result_item_roberta['positive'] + sentiment_scores['compound']) / 2
 
+        # Determine the sentiment label based on the combined score
         if combined_score >= 0.05:
             sentiment_label = 'positive'
         elif combined_score <= -0.05:

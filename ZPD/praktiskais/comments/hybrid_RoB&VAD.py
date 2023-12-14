@@ -294,7 +294,7 @@ class SentimentAnalyzer:
 
 
 developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
-video_id = "mxwcHbNnfn4"
+video_id = "Ikc8qnlHpY8"
 print("loading...")
 scrape = Scrape_Comments(developer_key)
 scrape.get_comments(video_id)

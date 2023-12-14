@@ -141,3 +141,53 @@ body {
     color: #d5f3e3;
     border: 1px solid #f5f5f5;
 }
+.negativeHero{
+    height: auto;
+}
+.response-back{
+    border: 3px solid #212427;
+    background-color: #d1e5db;
+    border-radius: 10px;
+}
+.negativeHero h2{
+    font-weight: 700;
+}
+.negativeHero p{
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.neutralHero{
+    height: auto;
+}
+.response-back{
+    border: 3px solid #212427;
+    background-color: #d1e5db;
+    border-radius: 10px;
+}
+.neutralHero h2{
+    font-weight: 700;
+}
+.neutralHero p{
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.positiveHero{
+    height: auto;
+}
+.response-back{
+    border: 3px solid #212427;
+    background-color: #d1e5db;
+    border-radius: 10px;
+}
+.positiveHero h2{
+    font-weight: 700;
+}
+.positiveHero p{
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
