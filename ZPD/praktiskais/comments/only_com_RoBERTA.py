@@ -315,24 +315,24 @@ class overall:
         with open('praktiskais/sentiment/negative.json', 'w') as file:
             json.dump(highest_negative_comments, file, indent=4)
 
-developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
-video_id = "SzXOq1Q1J1Y"
-print("loading...")
-scrape = Scrape_Comments(developer_key)
-scrape.get_comments(video_id)
-scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
-scrape.count_comments()
+# developer_key = "AIzaSyBrlZLMhq1thWEuGp6bxQufQka7fUUj9b4"
+# video_id = "SzXOq1Q1J1Y"
+# print("loading...")
+# scrape = Scrape_Comments(developer_key)
+# scrape.get_comments(video_id)
+# scrape.save_comments_to_json('praktiskais/comments/jsons/comments.json')
+# scrape.count_comments()
 
-combine = Combine()
-combine.mix_Rep_and_com()
+# combine = Combine()
+# combine.mix_Rep_and_com()
 
-detect_lang = Detect_Language()
-detect_lang.detect_lang()
+# detect_lang = Detect_Language()
+# detect_lang.detect_lang()
 
-print("started translating...")
-translate_all = Translate_All_Comments()
-translate_all.translate()
-print("done!")
+# print("started translating...")
+# translate_all = Translate_All_Comments()
+# translate_all.translate()
+# print("done!")
 
 print("started sentiment...")
 sentiment_analyzer = SentimentAnalyzer()

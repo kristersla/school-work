@@ -14,7 +14,6 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import numpy as np
 
-
 class Scrape_Comments:
     def __init__(self, developer_key):
         self.api_service_name = "youtube"
@@ -83,7 +82,7 @@ class Cleaing:
             return re.sub(r'[^\w]', ' ', text)
         
         def remove_mentions(text):
-            return re.sub(r'[^a-z\s]+', ' ', text)
+            re.sub(r'[^a-zA-Z\s]', ' ', text)
         
         def remove_mentions(text):
             return re.sub(r'(\s+)', ' ', text)
