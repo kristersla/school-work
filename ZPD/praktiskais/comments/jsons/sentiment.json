@@ -1,617 +1,529 @@
 [
     {
-        "text": "free palestine",
-        "combined_score": 0.27875000000000005,
-        "sentiment_label": "positive",
-        "id": 1,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "bruh eros smells like cleaning spray and it smells nothing like vanilla",
-        "combined_score": 0.0572,
-        "sentiment_label": "positive",
-        "id": 5,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "jesus loves you",
-        "combined_score": 0.7456,
-        "sentiment_label": "positive",
-        "id": 11,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "free palestine",
-        "combined_score": 0.27875000000000005,
-        "sentiment_label": "positive",
-        "id": 13,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i tried light blue and it smelled like sweat on my skin",
-        "combined_score": 0.18480000000000002,
-        "sentiment_label": "positive",
-        "id": 18,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "le male the perfume has animalic notes? wut?",
-        "combined_score": 0.01185,
-        "sentiment_label": "neutral",
-        "id": 29,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "le parfum is better ultra male",
-        "combined_score": 0.40990000000000004,
-        "sentiment_label": "positive",
-        "id": 42,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "enjoying your videos!",
-        "combined_score": 0.77805,
-        "sentiment_label": "positive",
-        "id": 45,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "excellent. god bless.",
-        "combined_score": 0.89305,
-        "sentiment_label": "positive",
-        "id": 47,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "maison alhambra persues please",
-        "combined_score": 0.2233,
-        "sentiment_label": "positive",
-        "id": 52,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "free palestine",
-        "combined_score": 0.27875000000000005,
-        "sentiment_label": "positive",
-        "id": 54,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "free palestine",
-        "combined_score": 0.27875000000000005,
-        "sentiment_label": "positive",
-        "id": 67,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "make jaguar series video pls",
-        "combined_score": 0.12390000000000001,
-        "sentiment_label": "positive",
-        "id": 69,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "free palestine",
-        "combined_score": 0.27875000000000005,
-        "sentiment_label": "positive",
-        "id": 72,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "jaipur edp is great!",
-        "combined_score": 0.8218000000000001,
-        "sentiment_label": "positive",
-        "id": 73,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "free palestine",
-        "combined_score": 0.27875000000000005,
-        "sentiment_label": "positive",
-        "id": 74,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "love your channel",
-        "combined_score": 0.8077000000000001,
-        "sentiment_label": "positive",
-        "id": 76,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i tried versace eros and its basic as the school of scent said, not worth the buy.",
-        "combined_score": -0.08115,
-        "sentiment_label": "negative",
-        "id": 2,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i love the fragrance community on tiktok. everyone is asking about different colognes and others respond. everybody helps eachother. i love it!",
-        "combined_score": 0.948,
-        "sentiment_label": "positive",
-        "id": 3,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "oud touch is my daily bc its my only fragrance",
-        "combined_score": 0.3996,
-        "sentiment_label": "positive",
-        "id": 4,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i appreciate this type of content.. please do continue to produce.. bless..",
-        "combined_score": 0.87245,
-        "sentiment_label": "positive",
-        "id": 6,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "people says tht armani swy intensely is sold out but i got it forr ps76 and the other version for ps58",
-        "combined_score": 0.03115,
-        "sentiment_label": "neutral",
-        "id": 7,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "in australia, montblanc explorer is more than triple nautica",
-        "combined_score": 0.067,
-        "sentiment_label": "positive",
-        "id": 8,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "andrew tate wanna be",
-        "combined_score": 0.03405,
-        "sentiment_label": "neutral",
-        "id": 9,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "imo swy absolutely is a mix of jazz club and eros.",
-        "combined_score": 0.09135,
-        "sentiment_label": "positive",
-        "id": 10,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "gimme that jeremy fragnance",
-        "combined_score": 0.0652,
+        "text": "Great Video Paul ...",
+        "combined_score": 0.7749,
         "sentiment_label": "positive",
         "id": 12,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "dior homme sport 2021 is way too citrusy for me it makes me go nose blind in seconds",
-        "combined_score": -0.1979,
-        "sentiment_label": "negative",
+        "text": "Great video matte!",
+        "combined_score": 0.8125500000000001,
+        "sentiment_label": "positive",
         "id": 14,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "andrew tate ain't slick... take em glasses off",
-        "combined_score": 0.0108,
-        "sentiment_label": "neutral",
-        "id": 15,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i have try oud touch,and it's really great..long lasting and head turing..compliment getter too..also lattafa ameer al oudah..it's great aswell...",
-        "combined_score": 0.8049,
-        "sentiment_label": "positive",
-        "id": 16,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "not sure who that dude is with the 80s perm and stash but i honestly can't take him seriously.",
-        "combined_score": 0.32535000000000003,
-        "sentiment_label": "positive",
-        "id": 17,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "people are going to be rather surprised if they get the jaipur. it smells like somewhat 'old school' shaving cream.",
-        "combined_score": 0.27595,
-        "sentiment_label": "positive",
-        "id": 19,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "imo d&g light blue eau intense is super overrated, and the original pour homme is a much nicer scent.",
-        "combined_score": 0.58775,
-        "sentiment_label": "positive",
-        "id": 20,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "oud touch is absolutely useless. it smells disgusting .",
-        "combined_score": -0.3761,
-        "sentiment_label": "negative",
-        "id": 21,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "in london prada luna rosa and dior sauvage edt/ edp are very similar in price give or take ps5",
-        "combined_score": 0.1397,
-        "sentiment_label": "positive",
-        "id": 22,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "mercedes club black ain't discontinued",
-        "combined_score": 0.08355,
-        "sentiment_label": "positive",
-        "id": 23,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "surprise, surprise, omar support hamas , do not subscribe to this channel",
-        "combined_score": 0.3655,
-        "sentiment_label": "positive",
-        "id": 24,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "hey bro, been watching for a couple months and just subbed, got any fragrance recommendations for a young man(15 years old)",
-        "combined_score": 0.0559,
-        "sentiment_label": "positive",
-        "id": 25,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i just bought stronger with you absolute can anyone please give me some fragrances that have a similar feel",
-        "combined_score": 0.5485,
-        "sentiment_label": "positive",
-        "id": 26,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "is jpg le male le parfum good for teenagers as a winter signature?",
-        "combined_score": 0.31435,
-        "sentiment_label": "positive",
-        "id": 27,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i do own both swy absolutely and azzaro tmw and i adore both of them.",
-        "combined_score": 0.77025,
-        "sentiment_label": "positive",
-        "id": 28,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i'm looking for a smoother more natural smelling oud touch. the opening of the cheap ouds are like a chemical explosion to me. i want to keep it close to $100, and be in the style of oud satin mood. any suggestions anyone?",
-        "combined_score": 0.51915,
-        "sentiment_label": "positive",
-        "id": 30,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i bought azzaro the most wanted back in november 2022 but mine doesn't performs after initial 5 mins i mean what's with that",
-        "combined_score": 0.01675,
-        "sentiment_label": "neutral",
-        "id": 31,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "soooo aot ended... what were your thoughts of the grande finale?\nalso nice video, but i dont get why eros is so loved, i dont think its special.... eros flame is nice tho",
-        "combined_score": 0.53665,
-        "sentiment_label": "positive",
-        "id": 32,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "i am on a 1 month break from fragrance, and this is day 14 of no fragrance at all. man i miss them! i am doing this to clear nose blindness. normally i only do a one week break but it doesn't take long before the nose blind issues kick back in.\nso, as a treat to myself, i ordered mr majestic as a self gift for my birthday coming up as i love plum! it is my favourite note, so if it comes before my break ends, i will make it my first fragrance to wear after a month! can't wait",
-        "combined_score": 0.91585,
-        "sentiment_label": "positive",
-        "id": 33,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "asad is maybe nice to many, but it doesn't smell expensive, and although i am not a huge fan of elixir, asad misses out the things that makes people like it so much imo. i would personally wear asad over elixir however as i am not a fan of the liquorice tbh.",
-        "combined_score": -0.1886,
-        "sentiment_label": "negative",
-        "id": 34,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "the guy saying nobody has a bad thing to say about light blue eau intense clearly has not done much research, there are a lot of people who hate this fragrance. i did at first but wore it a few times and got past it and now love it on its own, and it is great for layering with many fragrances.",
-        "combined_score": 0.817,
-        "sentiment_label": "positive",
-        "id": 35,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "when influencers describe fragrances as \"fragrant\". damn thanks for blowing my mind.",
-        "combined_score": 0.0476,
-        "sentiment_label": "neutral",
-        "id": 36,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "would never recommend eros for a teenager! that's a club fragrance. also profondo is too heavy for an office.",
-        "combined_score": -0.16615,
-        "sentiment_label": "negative",
-        "id": 37,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "again you got it wrong with ultra male. in my skin it smells like a cold yakult (the probiotic) and in the deep dry down it smells a little balsamic and woody with that iso e super.",
-        "combined_score": 0.26120000000000004,
-        "sentiment_label": "positive",
-        "id": 38,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "dior homme sport is really well done",
-        "combined_score": 0.6514,
-        "sentiment_label": "positive",
-        "id": 39,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "too bad eros doesn't work on my skin. the sourness in it reminds me of urine.",
-        "combined_score": -0.26995,
-        "sentiment_label": "negative",
-        "id": 40,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "5 sprays of most wanted is too much?\nooooh your one of sissy sprayers...people spray 5 or more of your fragrances unless it's dior elixir",
-        "combined_score": 0.01595,
-        "sentiment_label": "neutral",
-        "id": 41,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "eros is a modern classic, let's be real. it holds the same place in younger guy's hearts as adg or le male did back in the day.",
-        "combined_score": 0.50305,
+        "text": "Very sensitive and intelligent description.",
+        "combined_score": 0.6192,
         "sentiment_label": "positive",
         "id": 43,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "hey, omar, how do you feel about nishant ani? i'm thinking about picking it up for 155 for 100ml.",
-        "combined_score": 0.0222,
+        "text": "Good video ....",
+        "combined_score": 0.6728000000000001,
+        "sentiment_label": "positive",
+        "id": 50,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "appreciate the video paul, i'm glad that you're back to producing them. you already were one of my favourite fragrance youtubers before your break but since your comeback you've had a certain attitude about you that makes me like you even better. sticking it to the snobs, trolls and bs fragrantica reviewers who, judging by the contents of their reviews clearly don't even own the fragrance! and now you're also bringing a more proletarian approach to fragrance collecting (which is very timely) but with the same standards and production quality, going back to the roots/basics of what this hobby is all about: smelling good! somewhere down the road, this community went from a bunch of guys and galls sharing their passion for juice that smells good and helping each other navigate the ocean of fragrances to find what they like without having to buy all of them to people flexing about how much they've spent and cringe worthy external validation seeking compliment hunters. this change happened around 2016 i'd say, right when a certain other content creator you mentioned in this video blew up and made the fragcom more mainstream. oh well, the juice is still what it's all about for me so i don't give a hoot anyway",
+        "combined_score": 0.88515,
+        "sentiment_label": "positive",
+        "id": 1,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "please can we get more of these budget fragrances. i actually enjoy them. especially with the current cost of living crisis",
+        "combined_score": 0.37855,
+        "sentiment_label": "positive",
+        "id": 2,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "hi\nnice frangipanes are these for ladies? or men do u get these on the middle isle of lidl? not seen perfume on the normal shelfs.\ni bort 1 in aldi cost 599p but i got reducef at ps4.19p its a copy pour femme. smells ok. thanks\nbye",
+        "combined_score": 0.6187,
+        "sentiment_label": "positive",
+        "id": 3,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i got a few of these yesterday after trying the tester of acqua fresh in the shop. it's a 1:1 of adg before recent reformulations. it reminds me of what adg smelled like in around 2002",
+        "combined_score": 0.37245,
+        "sentiment_label": "positive",
+        "id": 4,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i wasn't impressed by theboss bottled (so called grey hugo boss) in the shop by fiance got it anyway and i fell in love ...again ;) with the scent i mean",
+        "combined_score": 0.5829500000000001,
+        "sentiment_label": "positive",
+        "id": 5,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "to me deep blue smells like the classic d&g homme (clear bottle blue top)",
+        "combined_score": 0.6314500000000001,
+        "sentiment_label": "positive",
+        "id": 6,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i tried few of these and have to say for that price they smell better than expected, really close to expensive fragrances and last for days (and not smelling like a piss/ old fragrance later), even when you wash your clothes, you can still feel the smell and you don't have to pour half bottle on you, just 2-3 sprays last for whole day.",
+        "combined_score": 0.30095,
+        "sentiment_label": "positive",
+        "id": 7,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "acqua fresh great performance for that price.",
+        "combined_score": 0.81745,
+        "sentiment_label": "positive",
+        "id": 8,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i came here after buying the one today and thinking to go back and buy a few more, i am so happy with it and it has lasted over 3hrs for me, i have been told that it is a dupe of 1million which i really dislike, smells better in my opinion and watching your video helped, going back to buy 2 more frangrances - these are perfect for my gym sessions which last over 2hrs",
+        "combined_score": 0.8714500000000001,
+        "sentiment_label": "positive",
+        "id": 9,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i really love the bellini homme. after taking a shower in the morning it really gives you the right motivation to start the day. it is amazing. never compared it to dior sauvage though",
+        "combined_score": 0.942,
+        "sentiment_label": "positive",
+        "id": 10,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "great video. would you say the homme sauvage edp clone will be as accurate (just better dilution) than the edt you reviewed and thought was pretty good here?",
+        "combined_score": 0.8491500000000001,
+        "sentiment_label": "positive",
+        "id": 11,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "one fragrance is now eau de parfum and smells amazing. i mixed it with homme and had women dropping at my feet",
+        "combined_score": 0.762,
+        "sentiment_label": "positive",
+        "id": 13,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "that's a great video and really nice approach! late to the party but i was impressed",
+        "combined_score": 0.9309000000000001,
+        "sentiment_label": "positive",
+        "id": 15,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i'm really impressed by the essence dark blue.",
+        "combined_score": 0.7547999999999999,
+        "sentiment_label": "positive",
+        "id": 16,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "dark blue is better than new reformulation of dolce gabban pour homme! best buy ever, very close to original from 1995",
+        "combined_score": 0.888,
+        "sentiment_label": "positive",
+        "id": 17,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i tested a few the other night and when i got home elegance what's by far the best smelling. i'm so glad you figured out what it's a dupe of. i'm going to buy a bottle next time i'm there because i think it smells awesome.",
+        "combined_score": 0.9580500000000001,
+        "sentiment_label": "positive",
+        "id": 19,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "thank you on awesome analysis. my choice for the best is dark blue, it is almost identical to d&g pour homme and one disappointed me the most.",
+        "combined_score": 0.5763499999999999,
+        "sentiment_label": "positive",
+        "id": 20,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "great review. i saw all these but had no idea what some of them were dupes of",
+        "combined_score": 0.05375,
+        "sentiment_label": "positive",
+        "id": 21,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "reminds me how i feel about acqua essenciale blu. $30. i like it better then y edp and many other much more expensive \"blue\" type scents.",
+        "combined_score": 0.6213,
+        "sentiment_label": "positive",
+        "id": 22,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "lidl one fragrance is one of the most beautiful scents that i have ever smelt.",
+        "combined_score": 0.81325,
+        "sentiment_label": "positive",
+        "id": 23,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "omg paul mate x-bolt is absolutely spot on for boss bottled no1 can tell the difference i love em so much my mum is buyin deep tomo i can't bloody wait niceeeee 1 lidl",
+        "combined_score": 0.8766,
+        "sentiment_label": "positive",
+        "id": 24,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "brilliant stuff! thank you!",
+        "combined_score": 0.88505,
+        "sentiment_label": "positive",
+        "id": 25,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "that snap at jeremy's fragrances : brilliant :-) but on topic : x-bolt is brilliant - boss bottled is still one of my all-time favourites and x-bolt smells indeed \"better\" (even though it's 99% similar) and is also longer lasting.",
+        "combined_score": 0.9503,
+        "sentiment_label": "positive",
+        "id": 26,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "great review, very well presented\nthx from munich...",
+        "combined_score": 0.90545,
+        "sentiment_label": "positive",
+        "id": 27,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "so the name of the fragrance i have is \"one fragrance\", not \"the one\" but mine is pretty good. vanilla scent. comfortable, not synthetic, holds and projects well. for me it's the best sweet perfume. even prefer it over versace's dreamer.",
+        "combined_score": 0.9816499999999999,
+        "sentiment_label": "positive",
+        "id": 28,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i always assumed essence acqua fresh was a copy of issay miyaki. smells very reminiscent to me :)",
+        "combined_score": 0.7956,
+        "sentiment_label": "positive",
+        "id": 29,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "essence victory is my every day fragrance, absolutely love it and is such a long lasting smell for the price :)",
+        "combined_score": 0.9036,
+        "sentiment_label": "positive",
+        "id": 30,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "x bolt is really like boss bottled",
+        "combined_score": 0.3655,
+        "sentiment_label": "positive",
+        "id": 31,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "to me, victory also smells very similar to armani stronger with you!!",
+        "combined_score": 0.6768500000000001,
+        "sentiment_label": "positive",
+        "id": 32,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "honeslty homme is fantastic and great value. sauvage is like ps94, so this is about 17x cheaper. for me this is a very, very, very good copy. so much so i think if you chucked this in a sauvage bottle no one would know anynthe wiser. the problem is people in their head will see the price and immediately just see it as inferior! it isn't! this is fantastic!!!",
+        "combined_score": 0.78555,
+        "sentiment_label": "positive",
+        "id": 33,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "thanks for the video.",
+        "combined_score": 0.68805,
+        "sentiment_label": "positive",
+        "id": 34,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "are these still going ? love aqua di gio, so might give this a try.",
+        "combined_score": 0.7824,
+        "sentiment_label": "positive",
+        "id": 35,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "hey, i see that you have huge awareness of fragrances, do you somehow know if there is something similar or replacement on the market to davidoff echo for men? the product is off the market :/",
+        "combined_score": 0.009550000000000001,
+        "sentiment_label": "neutral",
+        "id": 36,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "hi, is there any chance of a review of cheap fragrances from la rive?",
+        "combined_score": 0.13905,
+        "sentiment_label": "positive",
+        "id": 37,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "regards from romania, i also bought four perfumes from our local lidl, namely from the petrol victory and dark blue range, i also took x-bolt and from the fragrances range i took wood which is also my favorite being a copy of terre d 'hermes, i can say that they are all good perfumes for a lower budget and with a persistence of less than two or three hours",
+        "combined_score": 0.76305,
+        "sentiment_label": "positive",
+        "id": 38,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "the lidl homme is really great..\ni did not like the one million\nx-bolt is also great..",
+        "combined_score": 0.84325,
+        "sentiment_label": "positive",
+        "id": 39,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "x_bolt from lidl is lovely, the women don't believe me when i tell them it is from there",
+        "combined_score": 0.62305,
+        "sentiment_label": "positive",
+        "id": 40,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "great job. i love x bolt and the essence line from lidl",
+        "combined_score": 0.9192,
+        "sentiment_label": "positive",
+        "id": 41,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "justr bought elegance. for me it's 1000% a creed aventus clone. i've never smelled \"the scent\" but it's just identical to creed aventus thoughts?",
+        "combined_score": 0.21089999999999998,
+        "sentiment_label": "positive",
+        "id": 42,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "are these available in american lidl stores?",
+        "combined_score": 0.01775,
         "sentiment_label": "neutral",
         "id": 44,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "benz club black is not discontinued bro",
-        "combined_score": 0.0488,
-        "sentiment_label": "neutral",
+        "text": "and i love the homme (sauvage ripoff)",
+        "combined_score": 0.7967500000000001,
+        "sentiment_label": "positive",
+        "id": 45,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "i smelled the essence fragrances today, the one i liked smelled the most feminine out of the range.. thought i picked up the right one but got dark blue and upon spraying at home it is not the one i thought. which would you say smells the most feminine?",
+        "combined_score": 0.184,
+        "sentiment_label": "positive",
         "id": 46,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "this is why your channel is at the top. when most reviewers are talking about \" fall and winter fragrances \" that make you smell like a walking doughnut it's nice to see this kind of video.",
-        "combined_score": 0.76325,
+        "text": "what essence perfume last longer? i want to buy 1 or 2, except ellengance this one isnt ar my lidl, and this are good perfumes for parents to buy for they kids, my mom send me to school, when i was younger, with axe and kappa perfumes and they didnt smells good at all",
+        "combined_score": 0.1642,
+        "sentiment_label": "positive",
+        "id": 47,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "thank you very much for this paul.....i've always wondered about these scents. you're really hitting the bulls eye in terms of an original approach.",
+        "combined_score": 0.7434000000000001,
         "sentiment_label": "positive",
         "id": 48,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "omar, can muslims wear boozy fragrances that have actual booze in it? i always wonder about that. i myself am muslim so far i haven't bought any fragrances with booze because i am not sure yet.",
-        "combined_score": -0.1024,
-        "sentiment_label": "negative",
+        "text": "is that essence line something new ? i don't see it in my lidl.",
+        "combined_score": 0.0169,
+        "sentiment_label": "neutral",
         "id": 49,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "on my opinion only jpg fragrances i like is le beau and ultra and both scandals and i hate elixir and le parfum they just smell very very bad on my opinion",
-        "combined_score": -0.42669999999999997,
-        "sentiment_label": "negative",
-        "id": 50,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "omar, don't tell them please about af 1981x, i wanna be the only 30 years old teenager who's wearing this .",
-        "combined_score": -0.08015,
-        "sentiment_label": "negative",
+        "text": "subscribed xx",
+        "combined_score": 0.25485,
+        "sentiment_label": "positive",
         "id": 51,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "4 minutes in and nothing ridiculous. click bait for the loss",
-        "combined_score": -0.007600000000000003,
-        "sentiment_label": "neutral",
+        "text": "elegance smells a bit like ysl homme and terre d' hermes. it was driving me mad too.",
+        "combined_score": 0.17495000000000002,
+        "sentiment_label": "positive",
+        "id": 52,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "the essence aqua is an issey miiyake clone and smells exactly the same as the original.",
+        "combined_score": 0.21145,
+        "sentiment_label": "positive",
         "id": 53,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "no lie i'm fan of eros fan. i don't wear it for occasions. it's become my running errands fragrance since it's become very popular.",
-        "combined_score": 0.6327499999999999,
+        "text": "love the videos, any chance you can review some of the inspired by fragrances that come from \"the essence vault\" as i have a few of theirs and i'd like to know what you think",
+        "combined_score": 0.86905,
+        "sentiment_label": "positive",
+        "id": 54,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "looool so true i don't think niche is worth the money for the most part and i own a fair few niche scents.in addition to over 70 designers i have concluded that i want 14 more as they are scent profiles i dont have.beyond that i have no need or desire for more,i'm very much satisfied i have both quality and quantity.\nbrands to avoid are creed,roja dove clive christian amongst a few others yes they have some quality scents but performance is frankly shocking.instead i'd say look into designers and if on a budget car brands bentley ferrari older brands like azzaro,ted lapidus and brands like bogart offer great scents for less.",
+        "combined_score": 0.6296999999999999,
         "sentiment_label": "positive",
         "id": 55,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "i got club black 3 months ago, and it was a march 2023 batch. not discontinued.",
-        "combined_score": 0.111,
-        "sentiment_label": "positive",
+        "text": "found the essence line in my local lidl but here in denmark it's 18 ps a bottle",
+        "combined_score": 0.0462,
+        "sentiment_label": "neutral",
         "id": 56,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "mercedes benz club black got so much demand, it just sold out not long after releasing new batch\ni am lucky to snatch one up end of last month as notino fr restock and few days later out of stock",
-        "combined_score": 0.496,
+        "text": "paul, nailed it once again mate! you know where i'm off tomorrow!! this is more of what is needed. unfortunately like you say we can't all afford ps100's and sometimes we just need something to throw on for work or even just after a shower. love, love, love this paul! thank you",
+        "combined_score": 0.9365,
         "sentiment_label": "positive",
         "id": 57,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "agree on legend spirit. i agree nautica is not great to me. i too get that rotten egg smell on many aquatic and blue scents. sucks cause i like them. i prefer ocean out of all the luna rossas and i don't get the rotten egg smell.",
-        "combined_score": 0.11055,
+        "text": "another great video",
+        "combined_score": 0.79645,
         "sentiment_label": "positive",
         "id": 58,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "i have to admit, the word \"ridiculous\" in the title had me looking forward to some clever takedowns, but the most we got was \"yeah, i can see their point.\" you were much less forgiving when you talked about viewer collections, and we're the people who support you. you should be roasting the videos that leave it at \"this is a good fragrance, and this is a good fragrance, and this one, too\" -- all while failing to tell us why. (except to say because it was their first fragrance, or because it's cheap.) they should all be telling us why one fragrance is better than the other, whether for the office, gym, clubbing, etc. any random tiktokker can make a loop that lists their favorites. i would recommend that you not give positive exposure to such content-free media.",
-        "combined_score": 0.5803,
+        "text": "another great video og really interesting content.",
+        "combined_score": 0.8885000000000001,
+        "sentiment_label": "positive",
+        "id": 59,
+        "like_count": 0,
+        "author": ""
+    },
+    {
+        "text": "'the one' might be an attempt at 'the one' by d&g? a bit obvious i guess, but who knows. will try a couple in my local lidly anyway.",
+        "combined_score": 0.0584,
         "sentiment_label": "positive",
         "id": 60,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "an alternative to dior homme sport is chanel allure homme sport cologne",
-        "combined_score": 0.0419,
+        "text": "there is another one from the rounded bottles line that's called wood but i can't figure out which fragrance copy.",
+        "combined_score": 0.02735,
         "sentiment_label": "neutral",
         "id": 61,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "i prefer eros flame myself , so many good recommendations ill be saving this video for later.",
-        "combined_score": 0.5202,
+        "text": "haven't seen the essence line yet. the others cost 3,99eur here in greece and are pretty decent.",
+        "combined_score": 0.5183,
         "sentiment_label": "positive",
         "id": 62,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "12:38 i agree. i bought a 50ml bottle for 20eur. it's hard to not like that one.",
-        "combined_score": 0.20095000000000002,
+        "text": "thank you for making this video i also bought all four of the essence bottles and i was also confused woth the elegance one . loved all of the fragrances and loved ur vdo too.\nkeep it up man",
+        "combined_score": 0.93665,
         "sentiment_label": "positive",
         "id": 63,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "love these",
-        "combined_score": 0.80335,
-        "sentiment_label": "positive",
+        "text": "quite rare to see these paul my local lidl hardly stock these",
+        "combined_score": 0.0224,
+        "sentiment_label": "neutral",
         "id": 64,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "you gotta try boucheron's jaipur homme edp. it's a really interesting oriental fragrance. when i first got it, i always thought it's perfect for the fall/winter. the more i wore it, i found it more suitable for the transitional phase from winter into spring, right around march to may is the best time for me to wear it. it has enough freshness and airyness and a slight floral touch for the warmer weather but still that oriental spicyness.",
-        "combined_score": 0.86815,
+        "text": "every time i watch your videos, i can't get over how awesome your shelving and lighting is. all of those colored bottles just look amazing!",
+        "combined_score": 0.9191,
         "sentiment_label": "positive",
         "id": 65,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "10:00 need to keep those fragrances away from the sun/window.",
-        "combined_score": 0.01695,
-        "sentiment_label": "neutral",
+        "text": "at that same price, i could easily recommend cuba gold, royal and prestige too. three clones that i actually slightly prefer to the originals. and of course, perfume parlour is always an option. a unique vid!",
+        "combined_score": 0.7815000000000001,
+        "sentiment_label": "positive",
         "id": 66,
         "like_count": 0,
         "author": ""
     },
     {
-        "text": "omar coming in to absolutely make our day with another reaction video. absolutely love your content and have learned so much from your reviews and buying guides.",
-        "combined_score": 0.8297,
+        "text": "big fan of this video concept, good job!\ni remember seeing poundland selling a couple of fragrances haha.",
+        "combined_score": 0.8981,
         "sentiment_label": "positive",
-        "id": 68,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "becarful around the xerjoff bottle boy",
-        "combined_score": 0.04005,
-        "sentiment_label": "neutral",
-        "id": 70,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "4:07\nbut in your last video you said asad is a 9 out of 10",
-        "combined_score": 0.02575,
-        "sentiment_label": "neutral",
-        "id": 71,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "jeremy is a clown that has to stage a video with a woman giving him a compliment.",
-        "combined_score": 0.3407,
-        "sentiment_label": "positive",
-        "id": 75,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "can you do another selfie suggestion type of video with your followers, would love to be part of it.",
-        "combined_score": 0.78155,
-        "sentiment_label": "positive",
-        "id": 77,
-        "like_count": 0,
-        "author": ""
-    },
-    {
-        "text": "we need a day in the life omar! both of your personal life and atrium fragrance day in the life",
-        "combined_score": 0.2272,
-        "sentiment_label": "positive",
-        "id": 78,
+        "id": 67,
         "like_count": 0,
         "author": ""
     }

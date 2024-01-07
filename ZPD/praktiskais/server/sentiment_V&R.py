@@ -76,7 +76,7 @@ class Cleaing:
             return re.sub(r'@\w+', '', text)
         
         def remove_mentions(text):
-            return re.sub(r'<herf+', '', text)
+            return re.sub(r'<href+', '', text)
         
         def remove_mentions(text):
             return re.sub(r'[^\w]', ' ', text)

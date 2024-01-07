@@ -13,3 +13,10 @@
 https://www.youtube.com/watch?v=zt3qE7Xt7-A
 https://www.codecademy.com/paths/machine-learning-engineer/tracks/mle-machine-learning-fundamentals/modules/mle-introduction-to-machine-learning/lessons/mlfun-why-machine-learning/exercises/what-is-machine-learning
 https://www.codecademy.com/paths/machine-learning-engineer/tracks/mle-machine-learning-fundamentals/modules/mle-introduction-to-machine-learning/lessons/mlfun-why-machine-learning/exercises/begin-your-journey
+https://link.springer.com/article/10.1007/s41019-019-0094-8
+
+https://paperswithcode.com/dataset/sst
+
+
+
+database - https://www.gigasheet.com/sample-data/sentiment-analysis-dataset

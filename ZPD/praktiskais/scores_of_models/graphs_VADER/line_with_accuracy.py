@@ -6,7 +6,7 @@ import json
 import re
 
 
-with open("praktiskais\\scores_of_models\\testing.csv", newline='') as f:
+with open("praktiskais\\scores_of_models\\testing-larger.csv", newline='') as f:
     reader = csv.reader(f)
     next(reader, None)
 
