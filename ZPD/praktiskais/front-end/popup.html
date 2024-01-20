@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Extension</title>
+  <script src="popup.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-title">
+      <h1>SentiVibe</h1>
+      <div class="about">
+        <p>Izpēti ko citi domā par šo tēmu ar sentimenta nolasīšanas klasifikatoru.</p>
+        <p>Atklājiet, ko citi domā tikai ar vienu klikšķi!</p>
+      </div>
+    </div>
+    <button class="button1" id="getIdBtn">Nolasīt</button>
+    <div id="outputContainer"></div>
+    <div class="loading-container" id="loadingContainer">
+      <div class="loading-text">Lādējas...</div>
+    </div>
+  </section>
+  <section class="results" style="display: none;">
+    <div class="around">
+      <div class="video-title" id="videoTitle">
+        <h1> </h1>
+      </div>
+      <div class="sentiment-score">
+        <h1 class="response" id="message"> </h1>
+      </div>
+    </div>
+    <div class="buttons-sent">
+      <button class="button2" id="getIdBtn2">Negativi</button>
+      <button class="button2" id="getIdBtn3">Neitrāli</button>
+      <button class="button2" id="getIdBtn4">positīvi</button>
+    </div>
+  </section>
+  <section class="negativeHero" style="display: none;">
+    <h2>Negatīvi</h2>
+    <br>
+    <div class="response-back">
+      <p id="negative"> </p> 
+    </div>
+    <div style="padding-bottom: 5px;">
+      <button class="button2" id="getIdBtn5">Atpakaļ</button>
+    </div>
+  </section>
+  <section class="neutralHero" style="display: none;">
+    <h2>Neitrāli</h2>
+    <div class="response-back">
+      <p id="neutral"> </p>
+    </div>
+    <div style="padding-bottom: 5px;">
+      <button class="button2" id="getIdBtn6">Atpakaļ</button>
+    </div> 
+  </section>
+  <section class="positiveHero" style="display: none;">
+    <h2>Pozitīvi</h2>
+    <br>
+    <div class="response-back">
+      <p id="positive"> </p>
+    </div>
+    <button class="button2" id="getIdBtn7">Atpakaļ</button>
+  </section>
+</body>
+</html>
