@@ -1,0 +1,21 @@
+cd /home/ubuntu/ZPDY/ZPD/
+
+sudo screen
+
+python3 server.py
+
+nohup python3 server.py > output.log 2>&1 &
+
+
+sudo lsof -i :7777
+
+
+sudo kill -9 12345
+
+sudo lsof -i :7777
+
+python3 server.py
+
+
+
+https://7cb5-141-145-192-62.ngrok-free.app/user/?user=1000
