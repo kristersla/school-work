@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SentiVibe Extension</title>
+  <script src="popup.js"></script>
+  <script src="dots.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-title">
+      <h1>SentiVibe</h1>
+      <div class="about">
+        <p>Explore what others think about this topic with a sentiment analysis classifier.</p>
+        <p>Discover what others think with just one click!</p>        
+      </div>
+    </div>
+    <button class="button1" id="readButton">Start</button>
+    <div class="loading-container" id="loadingContainer">
+      <div class="loading-text"></div>
+    </div>    
+  </section>
+  <section class="loadingSc">
+    <div class="loading-text">
+      <h1>Loading:</h1>
+      <p style="font-size: 24px;"><span id="timer">0</span></p>
+    </div>
+  </section>
+  
+  <section class="results" style="display: none;">
+    <div class="around">
+      <div class="video-title">
+        <h1 style="font-size: 18px;" id="videoTitle"> </h1>
+      </div>       
+      <div class="sentiment-score">
+        <h1 class="response" id="output"> </h1>
+      </div>
+    </div>
+    <div class="buttons-sent">
+      <button class="button2" id="getIdBtn2">Negative</button>
+      <button class="button2" id="getIdBtn3">Neutral</button>
+      <button class="button2" id="getIdBtn4">Positive</button>
+    </div>
+  </section>
+
+  <section class="negativeHero" style="display: none;">
+    <h2>Negative</h2>
+    <br></br>
+    <div class="response-back">
+      <p id="negative"> </p> 
+    </div>
+    <div style="padding-bottom: 5px;">
+      <button class="button2" id="getIdBtn5">Back</button>
+    </div>
+  </section>
+
+  <section class="neutralHero" style="display: none;">
+    <h2>Neutral</h2>
+    <div class="response-back">
+      <p id="neutral"> </p>
+    </div>
+    <div style="padding-bottom: 5px;">
+      <button class="button2" id="getIdBtn6">Back</button>
+    </div> 
+  </section>
+
+  <section class="positiveHero" style="display: none;">
+    <h2>Positive</h2>
+    <br>
+    <div class="response-back">
+      <p id="positive"> </p>
+    </div>
+    <button class="button2" id="getIdBtn7">Back</button>
+  </section>
+</body>
+</html>
